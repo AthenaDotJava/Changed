@@ -1,0 +1,227 @@
+{
+  "thewhiteknight": {
+    "category": "music",
+    "sounds": [
+      {
+        "name": "changed:01-the_white_knight",
+        "stream": true
+      }
+    ]
+  },
+  "catchase": {
+    "category": "music",
+    "sounds": [
+      {
+        "name": "changed:02-cat_chase",
+        "stream": true
+      }
+    ]
+  },
+  "blackgoozone": {
+    "category": "music",
+    "sounds": [
+      {
+        "name": "changed:03-black_goo_zone",
+        "stream": true
+      }
+    ]
+  },
+  "crystalzone": {
+    "category": "music",
+    "sounds": [
+      {
+        "name": "changed:04-crystal_zone_full_version",
+        "stream": true
+      }
+    ]
+  },
+  "crystaldragon": {
+    "category": "music",
+    "sounds": [
+      {
+        "name": "changed:05-crystal_dragon",
+        "stream": true
+      }
+    ]
+  },
+  "whitetailchasept1": {
+    "category": "music",
+    "sounds": [
+      {
+        "name": "changed:07-the_white_tail_chase_part_1",
+        "stream": true
+      }
+    ]
+  },
+  "thelibrary": {
+    "category": "music",
+    "sounds": [
+      {
+        "name": "changed:06-the_library",
+        "stream": true
+      }
+    ]
+  },
+  "whitetailchasept2": {
+    "category": "music",
+    "sounds": [
+      {
+        "name": "changed:08-the_white_tail_chase_part_2",
+        "stream": true
+      }
+    ]
+  },
+  "puroandtheblackgoo": {
+    "category": "music",
+    "sounds": [
+      {
+        "name": "changed:09-puro_the_black_goo",
+        "stream": true
+      }
+    ]
+  },
+  "ventpipe": {
+    "category": "music",
+    "sounds": [
+      {
+        "name": "changed:10-vent_pipe",
+        "stream": true
+      }
+    ]
+  },
+  "theshark": {
+    "category": "music",
+    "sounds": [
+      {
+        "name": "changed:14-the_shark",
+        "stream": true
+      }
+    ]
+  },
+  "puroshome": {
+    "category": "music",
+    "sounds": [
+      {
+        "name": "changed:11-puros_home",
+        "stream": true
+      }
+    ]
+  },
+  "ventpipecheetarchase": {
+    "category": "music",
+    "sounds": [
+      {
+        "name": "changed:13-vent_pipe_cheetar_chase",
+        "stream": true
+      }
+    ]
+  },
+  "thesquiddog": {
+    "category": "music",
+    "sounds": [
+      {
+        "name": "changed:15-the_squid_dog",
+        "stream": true
+      }
+    ]
+  },
+  "whitegoojungle": {
+    "category": "music",
+    "sounds": [
+      {
+        "name": "changed:16-white_goo_jungle",
+        "stream": true
+      }
+    ]
+  },
+  "lionchase": {
+    "category": "music",
+    "sounds": [
+      {
+        "name": "changed:17-lion-chase",
+        "stream": true
+      }
+    ]
+  },
+  "laboratory": {
+    "category": "music",
+    "sounds": [
+      {
+        "name": "changed:18-laboratory",
+        "stream": true
+      }
+    ]
+  },
+  "scarletcrystalmine": {
+    "category": "music",
+    "sounds": [
+      {
+        "name": "changed:19-scarlet-crystal-mine",
+        "stream": true
+      }
+    ]
+  },
+  "thebadend": {
+    "category": "music",
+    "sounds": [
+      {
+        "name": "changed:20-the-bad-end",
+        "stream": true
+      }
+    ]
+  },
+  "outsideofthetower": {
+    "category": "music",
+    "sounds": [
+      {
+        "name": "changed:21-outside-of-the-tower",
+        "stream": true
+      }
+    ]
+  },
+  "finale": {
+    "category": "music",
+    "sounds": [
+      {
+        "name": "changed:22-finale",
+        "stream": true
+      }
+    ]
+  },
+  "crueltruth": {
+    "category": "record",
+    "sounds": [
+      {
+        "name": "changed:bonus1-cruel-truth",
+        "stream": true
+      }
+    ]
+  },
+  "birthdaysong": {
+    "category": "record",
+    "sounds": [
+      {
+        "name": "changed:bonus2-birthday-song",
+        "stream": true
+      }
+    ]
+  },
+  "purodance": {
+    "category": "record",
+    "sounds": [
+      {
+        "name": "changed:puro-dance",
+        "stream": true
+      }
+    ]
+  },
+  "gasroom": {
+    "category": "music",
+    "sounds": [
+      {
+        "name": "changed:12-gas_room",
+        "stream": true
+      }
+    ]
+  }
+}

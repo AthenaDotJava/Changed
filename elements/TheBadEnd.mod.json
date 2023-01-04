@@ -1,0 +1,21 @@
+{
+  "_fv": 34,
+  "_type": "musicdisc",
+  "definition": {
+    "name": "The Bad End",
+    "texture": "thebadend",
+    "description": "Shizi - The Bad End",
+    "creativeTab": {
+      "value": "CUSTOM:Changed"
+    },
+    "specialInfo": [
+      "Track 20"
+    ],
+    "hasGlow": false,
+    "music": {
+      "value": "CUSTOM:thebadend"
+    },
+    "lengthInTicks": 0,
+    "analogOutput": 0
+  }
+}

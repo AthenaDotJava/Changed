@@ -1,0 +1,21 @@
+{
+  "_fv": 34,
+  "_type": "musicdisc",
+  "definition": {
+    "name": "Puro And The Black Goo",
+    "texture": "puroandtheblackgoo",
+    "description": "Shizi - Puro and the Black Goo",
+    "creativeTab": {
+      "value": "CUSTOM:Changed"
+    },
+    "specialInfo": [
+      "Track 09"
+    ],
+    "hasGlow": false,
+    "music": {
+      "value": "CUSTOM:puroandtheblackgoo"
+    },
+    "lengthInTicks": 0,
+    "analogOutput": 0
+  }
+}

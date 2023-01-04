@@ -1,0 +1,21 @@
+{
+  "_fv": 34,
+  "_type": "musicdisc",
+  "definition": {
+    "name": "The Squid Dog",
+    "texture": "squiddog",
+    "description": "Shizi - The Squid Dog",
+    "creativeTab": {
+      "value": "CUSTOM:Changed"
+    },
+    "specialInfo": [
+      "Track 15"
+    ],
+    "hasGlow": false,
+    "music": {
+      "value": "CUSTOM:thesquiddog"
+    },
+    "lengthInTicks": 0,
+    "analogOutput": 0
+  }
+}

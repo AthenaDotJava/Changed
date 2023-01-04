@@ -1,0 +1,11 @@
+{
+  "mappings": {
+    "default": {
+      "map": {
+        "Paper": "savepaper",
+        "Body": "savestationbody"
+      },
+      "name": "default"
+    }
+  }
+}

@@ -1,0 +1,131 @@
+{
+  "_fv": 34,
+  "_type": "gui",
+  "definition": {
+    "type": 0,
+    "width": 160,
+    "height": 160,
+    "inventoryOffsetX": 0,
+    "inventoryOffsetY": 0,
+    "renderBgLayer": true,
+    "doesPauseGame": true,
+    "components": [
+      {
+        "type": "label",
+        "data": {
+          "text": "Try to stay hopeful.",
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "name": "Try to stay hopeful.",
+          "x": 160,
+          "y": 53
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "Save",
+          "width": 46,
+          "height": 20,
+          "name": "Save",
+          "x": 187,
+          "y": 110
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "save_ui.png",
+          "use1Xscale": false,
+          "name": "save_ui.png",
+          "x": 133,
+          "y": 40
+        }
+      },
+      {
+        "type": "textfield",
+        "data": {
+          "placeholder": "",
+          "width": 120,
+          "height": 20,
+          "name": "StationID",
+          "x": 2,
+          "y": 42
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "Station ID",
+          "color": {
+            "value": -12779521,
+            "falpha": 0.0
+          },
+          "name": "Station ID",
+          "x": 3,
+          "y": 31
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "X Y Z",
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "name": "X Y Z",
+          "x": 4,
+          "y": 64
+        }
+      },
+      {
+        "type": "textfield",
+        "data": {
+          "placeholder": "",
+          "width": 120,
+          "height": 20,
+          "name": "StationPOS",
+          "x": 2,
+          "y": 78
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "Debug",
+          "color": {
+            "value": -12844801,
+            "falpha": 0.0
+          },
+          "name": "Debug",
+          "x": 52,
+          "y": 18
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "Set Station",
+          "onClick": {
+            "name": "SetStation"
+          },
+          "width": 82,
+          "height": 20,
+          "name": "Set Station",
+          "x": 23,
+          "y": 109
+        }
+      }
+    ],
+    "gridSettings": {
+      "sx": 18,
+      "sy": 18,
+      "ox": 11,
+      "oy": 15,
+      "snapOnGrid": false
+    }
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "parent": "changed:custom/save_station",
+  "textures": {
+    "all": "changed:blocks/savestationbody",
+    "particle": "changed:blocks/savestationbody",
+    "Paper": "changed:blocks/savepaper",
+    "Body": "changed:blocks/savestationbody"
+  },
+  "render_type": "cutout"
+}

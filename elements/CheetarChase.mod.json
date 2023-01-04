@@ -1,0 +1,21 @@
+{
+  "_fv": 34,
+  "_type": "musicdisc",
+  "definition": {
+    "name": "Vent Pipe Cheetar Chase",
+    "texture": "ventpipecheetarchase",
+    "description": "Shizi - Vent Pipe Cheetar Case",
+    "creativeTab": {
+      "value": "CUSTOM:Changed"
+    },
+    "specialInfo": [
+      "Track 13"
+    ],
+    "hasGlow": false,
+    "music": {
+      "value": "CUSTOM:ventpipecheetarchase"
+    },
+    "lengthInTicks": 0,
+    "analogOutput": 0
+  }
+}

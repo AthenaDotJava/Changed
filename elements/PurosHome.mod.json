@@ -1,0 +1,21 @@
+{
+  "_fv": 34,
+  "_type": "musicdisc",
+  "definition": {
+    "name": "Puro's Home",
+    "texture": "gasroom",
+    "description": "Shizi - Puro's Home",
+    "creativeTab": {
+      "value": "CUSTOM:Changed"
+    },
+    "specialInfo": [
+      "Track 11"
+    ],
+    "hasGlow": false,
+    "music": {
+      "value": "CUSTOM:puroshome"
+    },
+    "lengthInTicks": 0,
+    "analogOutput": 0
+  }
+}

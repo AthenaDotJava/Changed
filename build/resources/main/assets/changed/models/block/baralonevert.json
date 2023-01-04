@@ -1,0 +1,9 @@
+{
+  "parent": "changed:custom/baralonevert",
+  "textures": {
+    "all": "changed:blocks/bar",
+    "particle": "changed:blocks/bar",
+    "0": "changed:blocks/bar"
+  },
+  "render_type": "cutout"
+}

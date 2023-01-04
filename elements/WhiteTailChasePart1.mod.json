@@ -1,0 +1,21 @@
+{
+  "_fv": 34,
+  "_type": "musicdisc",
+  "definition": {
+    "name": "White Tail Chase Part 1",
+    "texture": "whitetailchasept1",
+    "description": "Shizi - White Tail Chase Part 1",
+    "creativeTab": {
+      "value": "CUSTOM:Changed"
+    },
+    "specialInfo": [
+      "Track 07"
+    ],
+    "hasGlow": false,
+    "music": {
+      "value": "CUSTOM:whitetailchasept1"
+    },
+    "lengthInTicks": 0,
+    "analogOutput": 0
+  }
+}

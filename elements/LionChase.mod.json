@@ -1,0 +1,21 @@
+{
+  "_fv": 34,
+  "_type": "musicdisc",
+  "definition": {
+    "name": "Lion Chase",
+    "texture": "lionchase",
+    "description": "ShizI - Lion Chase",
+    "creativeTab": {
+      "value": "CUSTOM:Changed"
+    },
+    "specialInfo": [
+      "Track 17"
+    ],
+    "hasGlow": false,
+    "music": {
+      "value": "CUSTOM:lionchase"
+    },
+    "lengthInTicks": 0,
+    "analogOutput": 0
+  }
+}

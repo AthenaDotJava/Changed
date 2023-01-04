@@ -1,0 +1,21 @@
+{
+  "_fv": 34,
+  "_type": "musicdisc",
+  "definition": {
+    "name": "PURO DANCE",
+    "texture": "purodance",
+    "description": "Shizi - PURO DANCE",
+    "creativeTab": {
+      "value": "CUSTOM:Changed"
+    },
+    "specialInfo": [
+      "PURO DANCE PURO DANCE PURO DANCE PURO DANCE"
+    ],
+    "hasGlow": false,
+    "music": {
+      "value": "CUSTOM:purodance"
+    },
+    "lengthInTicks": 0,
+    "analogOutput": 0
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "_fv": 34,
+  "_type": "musicdisc",
+  "definition": {
+    "name": "Birthday Song",
+    "texture": "birthdaysong",
+    "description": "Shizi - Birthday Song",
+    "creativeTab": {
+      "value": "CUSTOM:Changed"
+    },
+    "specialInfo": [
+      "Bonus 2"
+    ],
+    "hasGlow": false,
+    "music": {
+      "value": "CUSTOM:birthdaysong"
+    },
+    "lengthInTicks": 0,
+    "analogOutput": 0
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "parent": "changed:custom/vent",
+  "textures": {
+    "all": "changed:blocks/vent",
+    "particle": "changed:blocks/vent",
+    "0": "changed:blocks/vent"
+  },
+  "render_type": "cutout"
+}

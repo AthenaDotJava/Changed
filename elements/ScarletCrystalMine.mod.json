@@ -1,0 +1,21 @@
+{
+  "_fv": 34,
+  "_type": "musicdisc",
+  "definition": {
+    "name": "Scarlet Crystal Mine",
+    "texture": "scarletcrystalmine",
+    "description": "Shizi - Scarlet Crystal Mine",
+    "creativeTab": {
+      "value": "CUSTOM:Changed"
+    },
+    "specialInfo": [
+      "Track 19"
+    ],
+    "hasGlow": false,
+    "music": {
+      "value": "CUSTOM:scarletcrystalmine"
+    },
+    "lengthInTicks": 0,
+    "analogOutput": 0
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "replace": false,
+  "values": [
+    "changed:save_station",
+    "changed:capsule",
+    "changed:terminal"
+  ]
+}

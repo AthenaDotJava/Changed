@@ -1,0 +1,21 @@
+{
+  "_fv": 34,
+  "_type": "musicdisc",
+  "definition": {
+    "name": "Finale",
+    "texture": "finale",
+    "description": "Shizi - Finale",
+    "creativeTab": {
+      "value": "CUSTOM:Changed"
+    },
+    "specialInfo": [
+      "Track 22"
+    ],
+    "hasGlow": false,
+    "music": {
+      "value": "CUSTOM:finale"
+    },
+    "lengthInTicks": 0,
+    "analogOutput": 0
+  }
+}

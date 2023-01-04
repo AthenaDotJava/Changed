@@ -1,0 +1,1241 @@
+{
+  "mod_elements": [
+    {
+      "name": "BlackGooUpdateTick",
+      "type": "procedure",
+      "sortid": 33,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "black_goo_update_tick",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Triggers"
+    },
+    {
+      "name": "Puro",
+      "type": "livingentity",
+      "sortid": 1,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "puro",
+      "path": "~/Mobs/Passive"
+    },
+    {
+      "name": "WhiteGooBlob",
+      "type": "livingentity",
+      "sortid": 3,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "white_goo_blob",
+      "path": "~/Mobs/Hostile"
+    },
+    {
+      "name": "SlownessWhenWalkedOn",
+      "type": "procedure",
+      "sortid": 34,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "slowness_when_walked_on",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Triggers"
+    },
+    {
+      "name": "DrainGooPassThrough",
+      "type": "procedure",
+      "sortid": 35,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "drain_goo_pass_through",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Triggers"
+    },
+    {
+      "name": "Drain",
+      "type": "block",
+      "sortid": 5,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "drain",
+      "path": "~/Blocks"
+    },
+    {
+      "name": "SaveStationUI",
+      "type": "gui",
+      "sortid": 36,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "save_station_ui",
+      "path": "~/UI"
+    },
+    {
+      "name": "SaveStation",
+      "type": "block",
+      "sortid": 4,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "save_station",
+      "path": "~/Blocks"
+    },
+    {
+      "name": "WhiteLatex",
+      "type": "tag",
+      "sortid": 37,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "white_latex",
+      "path": "~/Misc"
+    },
+    {
+      "name": "Latex",
+      "type": "tag",
+      "sortid": 38,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "latex",
+      "path": "~/Misc"
+    },
+    {
+      "name": "BlackLatex",
+      "type": "tag",
+      "sortid": 39,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "black_latex",
+      "path": "~/Misc"
+    },
+    {
+      "name": "Blobs",
+      "type": "tag",
+      "sortid": 40,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "blobs",
+      "path": "~/Misc"
+    },
+    {
+      "name": "Changed",
+      "type": "tab",
+      "sortid": 43,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "changed",
+      "path": "~/Misc"
+    },
+    {
+      "name": "Save",
+      "type": "procedure",
+      "sortid": 44,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "save",
+      "metadata": {
+        "dependencies": []
+      },
+      "path": "~/Triggers"
+    },
+    {
+      "name": "CautionFloor",
+      "type": "block",
+      "sortid": 7,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "caution_floor",
+      "path": "~/Blocks"
+    },
+    {
+      "name": "SetStation",
+      "type": "procedure",
+      "sortid": 45,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "set_station",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "guistate",
+            "type": "map"
+          }
+        ]
+      },
+      "path": "~/Triggers"
+    },
+    {
+      "name": "TheWhiteKnight",
+      "type": "musicdisc",
+      "sortid": 8,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "the_white_knight",
+      "path": "~/Items/Disks"
+    },
+    {
+      "name": "CatChase",
+      "type": "musicdisc",
+      "sortid": 9,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "cat_chase",
+      "path": "~/Items/Disks"
+    },
+    {
+      "name": "BlackGooZone",
+      "type": "musicdisc",
+      "sortid": 10,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "black_goo_zone",
+      "path": "~/Items/Disks"
+    },
+    {
+      "name": "CrystalZone",
+      "type": "musicdisc",
+      "sortid": 11,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "crystal_zone",
+      "path": "~/Items/Disks"
+    },
+    {
+      "name": "CrystalDragon",
+      "type": "musicdisc",
+      "sortid": 12,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "crystal_dragon",
+      "path": "~/Items/Disks"
+    },
+    {
+      "name": "TheLibrary",
+      "type": "musicdisc",
+      "sortid": 13,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "the_library",
+      "path": "~/Items/Disks"
+    },
+    {
+      "name": "WhiteTailChasePart1",
+      "type": "musicdisc",
+      "sortid": 14,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "white_tail_chase_part_1",
+      "path": "~/Items/Disks"
+    },
+    {
+      "name": "WhiteTailChasePart2",
+      "type": "musicdisc",
+      "sortid": 15,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "white_tail_chase_part_2",
+      "path": "~/Items/Disks"
+    },
+    {
+      "name": "PuroAndTheBlackGoo",
+      "type": "musicdisc",
+      "sortid": 16,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "puro_and_the_black_goo",
+      "path": "~/Items/Disks"
+    },
+    {
+      "name": "VentPipe",
+      "type": "musicdisc",
+      "sortid": 17,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "vent_pipe",
+      "path": "~/Items/Disks"
+    },
+    {
+      "name": "PurosHome",
+      "type": "musicdisc",
+      "sortid": 18,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "puros_home",
+      "path": "~/Items/Disks"
+    },
+    {
+      "name": "GasRoom",
+      "type": "musicdisc",
+      "sortid": 19,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "gas_room",
+      "path": "~/Items/Disks"
+    },
+    {
+      "name": "CheetarChase",
+      "type": "musicdisc",
+      "sortid": 20,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "cheetar_chase",
+      "path": "~/Items/Disks"
+    },
+    {
+      "name": "TheShark",
+      "type": "musicdisc",
+      "sortid": 21,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "the_shark",
+      "path": "~/Items/Disks"
+    },
+    {
+      "name": "SquidDog",
+      "type": "musicdisc",
+      "sortid": 22,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "squid_dog",
+      "path": "~/Items/Disks"
+    },
+    {
+      "name": "WhiteGooJungle",
+      "type": "musicdisc",
+      "sortid": 23,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "white_goo_jungle",
+      "path": "~/Items/Disks"
+    },
+    {
+      "name": "LionChase",
+      "type": "musicdisc",
+      "sortid": 24,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "lion_chase",
+      "path": "~/Items/Disks"
+    },
+    {
+      "name": "Laboratory",
+      "type": "musicdisc",
+      "sortid": 25,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "laboratory",
+      "path": "~/Items/Disks"
+    },
+    {
+      "name": "ScarletCrystalMine",
+      "type": "musicdisc",
+      "sortid": 26,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "scarlet_crystal_mine",
+      "path": "~/Items/Disks"
+    },
+    {
+      "name": "TheBadEnd",
+      "type": "musicdisc",
+      "sortid": 27,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "the_bad_end",
+      "path": "~/Items/Disks"
+    },
+    {
+      "name": "OutsideTheTower",
+      "type": "musicdisc",
+      "sortid": 28,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "outside_the_tower",
+      "path": "~/Items/Disks"
+    },
+    {
+      "name": "Finale",
+      "type": "musicdisc",
+      "sortid": 29,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "finale",
+      "path": "~/Items/Disks"
+    },
+    {
+      "name": "BirthdaySong",
+      "type": "musicdisc",
+      "sortid": 31,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "birthday_song",
+      "path": "~/Items/Disks"
+    },
+    {
+      "name": "PURODANCE",
+      "type": "musicdisc",
+      "sortid": 32,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "purodance",
+      "path": "~/Items/Disks"
+    },
+    {
+      "name": "CruelTruth",
+      "type": "musicdisc",
+      "sortid": 30,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "cruel_truth",
+      "path": "~/Items/Disks"
+    },
+    {
+      "name": "TigerShark",
+      "type": "livingentity",
+      "sortid": 2,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "tiger_shark",
+      "path": "~/Mobs/Hostile"
+    },
+    {
+      "name": "Vent",
+      "type": "block",
+      "sortid": 6,
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "vent",
+      "path": "~/Blocks"
+    },
+    {
+      "name": "SaveParticle",
+      "type": "particle",
+      "sortid": 47,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "save_particle",
+      "path": "~/Misc"
+    },
+    {
+      "name": "VentToggle",
+      "type": "procedure",
+      "sortid": 50,
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "vent_toggle",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "blockstate",
+            "type": "blockstate"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Triggers"
+    },
+    {
+      "name": "VentOpenProcedure",
+      "type": "procedure",
+      "sortid": 51,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "vent_open_procedure",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "blockstate",
+            "type": "blockstate"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Triggers"
+    },
+    {
+      "name": "Bar",
+      "type": "block",
+      "sortid": 52,
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "bar",
+      "path": "~/Blocks"
+    },
+    {
+      "name": "BarConnection",
+      "type": "procedure",
+      "sortid": 54,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "bar_connection",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Triggers"
+    },
+    {
+      "name": "Wrench",
+      "type": "item",
+      "sortid": 55,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "wrench",
+      "path": "~/Items/Tools"
+    },
+    {
+      "name": "BarDirectionChange",
+      "type": "procedure",
+      "sortid": 55,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "bar_direction_change",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "blockstate",
+            "type": "blockstate"
+          },
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Triggers"
+    },
+    {
+      "name": "Capsule",
+      "type": "block",
+      "sortid": 56,
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "capsule",
+      "path": "~/Blocks"
+    },
+    {
+      "name": "CapsuleUpdate",
+      "type": "procedure",
+      "sortid": 58,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "capsule_update",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "blockstate",
+            "type": "blockstate"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Triggers"
+    },
+    {
+      "name": "CapsulePlacementCondition",
+      "type": "procedure",
+      "sortid": 59,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "capsule_placement_condition",
+      "metadata": {
+        "return_type": "logic",
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Triggers"
+    },
+    {
+      "name": "CapsuleWake",
+      "type": "procedure",
+      "sortid": 60,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "capsule_wake",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "blockstate",
+            "type": "blockstate"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Triggers"
+    },
+    {
+      "name": "CapsuleSleepUI",
+      "type": "gui",
+      "sortid": 60,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "capsule_sleep_ui",
+      "path": "~/UI"
+    },
+    {
+      "name": "CapsuleWake2",
+      "type": "procedure",
+      "sortid": 61,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "capsule_wake_2",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Triggers"
+    },
+    {
+      "name": "CapsulePlace",
+      "type": "procedure",
+      "sortid": 62,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "capsule_place",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Triggers"
+    },
+    {
+      "name": "CloseUI",
+      "type": "procedure",
+      "sortid": 63,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "close_ui",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Triggers"
+    },
+    {
+      "name": "CapsuleDelete",
+      "type": "procedure",
+      "sortid": 64,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "capsule_delete",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "blockstate",
+            "type": "blockstate"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Triggers"
+    },
+    {
+      "name": "Terminal",
+      "type": "block",
+      "sortid": 65,
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "terminal",
+      "path": "~/Blocks"
+    },
+    {
+      "name": "TerminalUI",
+      "type": "gui",
+      "sortid": 66,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "terminal_ui",
+      "path": "~/UI"
+    },
+    {
+      "name": "PassSetAndTest",
+      "type": "procedure",
+      "sortid": 67,
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "pass_set_and_test",
+      "metadata": {
+        "dependencies": []
+      },
+      "path": "~/Triggers"
+    }
+  ],
+  "variable_elements": [],
+  "sound_elements": [
+    {
+      "name": "thewhiteknight",
+      "files": [
+        "01-the_white_knight"
+      ],
+      "category": "music",
+      "subtitle": ""
+    },
+    {
+      "name": "catchase",
+      "files": [
+        "02-cat_chase"
+      ],
+      "category": "music",
+      "subtitle": ""
+    },
+    {
+      "name": "blackgoozone",
+      "files": [
+        "03-black_goo_zone"
+      ],
+      "category": "music",
+      "subtitle": ""
+    },
+    {
+      "name": "crystalzone",
+      "files": [
+        "04-crystal_zone_full_version"
+      ],
+      "category": "music",
+      "subtitle": ""
+    },
+    {
+      "name": "crystaldragon",
+      "files": [
+        "05-crystal_dragon"
+      ],
+      "category": "music",
+      "subtitle": ""
+    },
+    {
+      "name": "whitetailchasept1",
+      "files": [
+        "07-the_white_tail_chase_part_1"
+      ],
+      "category": "music",
+      "subtitle": ""
+    },
+    {
+      "name": "thelibrary",
+      "files": [
+        "06-the_library"
+      ],
+      "category": "music",
+      "subtitle": ""
+    },
+    {
+      "name": "whitetailchasept2",
+      "files": [
+        "08-the_white_tail_chase_part_2"
+      ],
+      "category": "music",
+      "subtitle": ""
+    },
+    {
+      "name": "puroandtheblackgoo",
+      "files": [
+        "09-puro_the_black_goo"
+      ],
+      "category": "music",
+      "subtitle": ""
+    },
+    {
+      "name": "ventpipe",
+      "files": [
+        "10-vent_pipe"
+      ],
+      "category": "music",
+      "subtitle": ""
+    },
+    {
+      "name": "theshark",
+      "files": [
+        "14-the_shark"
+      ],
+      "category": "music",
+      "subtitle": ""
+    },
+    {
+      "name": "puroshome",
+      "files": [
+        "11-puros_home"
+      ],
+      "category": "music",
+      "subtitle": ""
+    },
+    {
+      "name": "ventpipecheetarchase",
+      "files": [
+        "13-vent_pipe_cheetar_chase"
+      ],
+      "category": "music",
+      "subtitle": ""
+    },
+    {
+      "name": "thesquiddog",
+      "files": [
+        "15-the_squid_dog"
+      ],
+      "category": "music",
+      "subtitle": ""
+    },
+    {
+      "name": "whitegoojungle",
+      "files": [
+        "16-white_goo_jungle"
+      ],
+      "category": "music",
+      "subtitle": ""
+    },
+    {
+      "name": "lionchase",
+      "files": [
+        "17-lion-chase"
+      ],
+      "category": "music",
+      "subtitle": ""
+    },
+    {
+      "name": "laboratory",
+      "files": [
+        "18-laboratory"
+      ],
+      "category": "music",
+      "subtitle": ""
+    },
+    {
+      "name": "scarletcrystalmine",
+      "files": [
+        "19-scarlet-crystal-mine"
+      ],
+      "category": "music",
+      "subtitle": ""
+    },
+    {
+      "name": "thebadend",
+      "files": [
+        "20-the-bad-end"
+      ],
+      "category": "music",
+      "subtitle": ""
+    },
+    {
+      "name": "outsideofthetower",
+      "files": [
+        "21-outside-of-the-tower"
+      ],
+      "category": "music",
+      "subtitle": ""
+    },
+    {
+      "name": "finale",
+      "files": [
+        "22-finale"
+      ],
+      "category": "music",
+      "subtitle": ""
+    },
+    {
+      "name": "crueltruth",
+      "files": [
+        "bonus1-cruel-truth"
+      ],
+      "category": "record",
+      "subtitle": ""
+    },
+    {
+      "name": "birthdaysong",
+      "files": [
+        "bonus2-birthday-song"
+      ],
+      "category": "record",
+      "subtitle": ""
+    },
+    {
+      "name": "purodance",
+      "files": [
+        "puro-dance"
+      ],
+      "category": "record",
+      "subtitle": ""
+    },
+    {
+      "name": "gasroom",
+      "files": [
+        "12-gas_room"
+      ],
+      "category": "music",
+      "subtitle": ""
+    }
+  ],
+  "language_map": {
+    "en_us": {
+      "entity.changed.puro": "Puro",
+      "item.changed.the_library.desc": "Shizi - The Library",
+      "subtitles.thelibrary": "",
+      "item.changed.outside_the_tower": "Outside Of The Tower",
+      "item.changed.crystal_zone": "Crystal Zone",
+      "item.changed.vent_pipe": "Vent Pipe",
+      "item.changed.white_goo_jungle.desc": "Shizi - White Goo Jungle",
+      "entity.changed_mod.white_goo_blob": "White Goo Blob",
+      "subtitles.whitetailchasept1": "",
+      "item.changed.black_goo_zone.desc": "Black Goo Zone - Shizi",
+      "subtitles.whitetailchasept2": "",
+      "subtitles.scarletcrystalmine": "",
+      "item.changed.white_tail_chase_part_1.desc": "Shizi - White Tail Chase Part 1",
+      "entity.changedmod.puro": "Puro",
+      "subtitles.puroandtheblackgoo": "",
+      "subtitles.ost": "",
+      "subtitles.crystaldragon": "",
+      "item.changed.the_white_knight": "The White Knight",
+      "block.changed.caution_floor": "Caution Floor",
+      "item.changed.cat_chase": "Cat Chase",
+      "subtitles.catchase": "",
+      "item.changed.crystal_dragon.desc": "Shizi - Crystal Dragon",
+      "item.changed.outside_the_tower.desc": "Shizi - Outside Of The Tower",
+      "subtitles.ventpipe": "",
+      "item.changed.birthday_song": "Birthday Song",
+      "item.changed.lion_chase.desc": "ShizI - Lion Chase",
+      "block.changed.save_station": "Save Station",
+      "entity.changed.white_goo_blob": "White Goo Blob",
+      "item.changed.the_shark.desc": "Shizi - The Shark",
+      "entity.changed.tiger_shark": "Tiger Shark",
+      "item.changed.scarlet_crystal_mine": "Scarlet Crystal Mine",
+      "item.changed.birthday_song.desc": "Shizi - Birthday Song",
+      "item.changed.scarlet_crystal_mine.desc": "Shizi - Scarlet Crystal Mine",
+      "subtitles.birthdaysong": "",
+      "block.changed.bar": "Bar",
+      "item.changed.the_library": "The Library",
+      "subtitles.puroshome": "",
+      "subtitles.thesquiddog": "",
+      "item.changed.puro_and_the_black_goo": "Puro And The Black Goo",
+      "item.changed.laboratory.desc": "Shizi - Laboratory",
+      "item.changed.wrench": "Wrench",
+      "item.changed.cheetar_chase": "Vent Pipe Cheetar Chase",
+      "entity.changed_mod.puro": "Puro",
+      "block.changedmod.black_goo": "Black Goo",
+      "item.changed.finale": "Finale",
+      "item.changed.tiger_shark_spawn_egg": "Tiger Shark Spawn Egg",
+      "item.changed.cruel_truth": "Cruel Truth",
+      "item.changed.white_tail_chase_part_1": "White Tail Chase Part 1",
+      "block.changed.drain": "Drain",
+      "item.changed.white_tail_chase_part_2": "White Tail Chase Part 2",
+      "item.changed.squid_dog": "The Squid Dog",
+      "subtitles.thewhiteknight": "",
+      "item.changed.vent_pipe.desc": "Shizi - Vent Pipe",
+      "itemGroup.tabchanged": "Changed",
+      "item.changed.black_goo_zone": "Black Goo Zone",
+      "item.changed.white_goo_jungle": "White Goo Jungle",
+      "item.changed.gas_room.desc": "Shizi - Gas Room",
+      "item.changedmod.white_goo_blob_spawn_egg": "White Goo Blob Spawn Egg",
+      "subtitles.purodance": "",
+      "item.changed_mod.puro_spawn_egg": "Puro Spawn Egg",
+      "subtitles.crystalzone": "",
+      "item.changed.finale.desc": "Shizi - Finale",
+      "item.changed_mod.white_goo_blob_spawn_egg": "White Goo Blob Spawn Egg",
+      "item.changed.the_white_knight.desc": "Shizi - The White Knight",
+      "item.changed.squid_dog.desc": "Shizi - The Squid Dog",
+      "item.changed.crystal_dragon": "Crystal Dragon",
+      "item.changed.crystal_zone.desc": "Shizi - Crystal Zone",
+      "item.changed.cheetar_chase.desc": "Shizi - Vent Pipe Cheetar Case",
+      "item.changed.the_bad_end.desc": "Shizi - The Bad End",
+      "subtitles.thebadend": "",
+      "item.changed.purodance.desc": "Shizi - PURO DANCE",
+      "subtitles.whitegoojungle": "",
+      "subtitles.gasroom": "",
+      "item.changedmod.puro_spawn_egg": "Puro Spawn Egg",
+      "item.changed.the_shark": "The Shark",
+      "block.changed_mod.black_goo": "Black Goo",
+      "item.changed.the_bad_end": "The Bad End",
+      "subtitles.finale": "",
+      "subtitles.crueltruth": "",
+      "item.changed.puros_home": "Puro\u0027s Home",
+      "block.changed.terminal": "Terminal",
+      "entity.changedmod.white_goo_blob": "White Goo Blob",
+      "item.changed.cruel_truth.desc": "Shizi - Cruel Truth",
+      "item.changed.lion_chase": "Lion Chase",
+      "item.changed.laboratory": "Laboratory",
+      "item.changed.puro_and_the_black_goo.desc": "Shizi - Puro and the Black Goo",
+      "item.changed.puros_home.desc": "Shizi - Puro\u0027s Home",
+      "item.changed.cat_chase.desc": "Cat Chase - Shizi",
+      "subtitles.ventpipecheetarchase": "",
+      "item.changed.white_tail_chase_part_2.desc": "Shizi - White Tail Chase Part 2",
+      "item.changed.purodance": "PURO DANCE",
+      "subtitles.theshark": "",
+      "item.changed.puro_spawn_egg": "Puro Spawn Egg",
+      "block.changed.vent": "Vent",
+      "block.changed.capsule": "Capsule",
+      "item.changed.gas_room": "Gas Room",
+      "subtitles.laboratory": "",
+      "subtitles.blackgoozone": "",
+      "subtitles.lionchase": "",
+      "subtitles.outsideofthetower": "",
+      "item.changed.white_goo_blob_spawn_egg": "White Goo Blob Spawn Egg"
+    }
+  },
+  "foldersRoot": {
+    "name": "~",
+    "children": [
+      {
+        "name": "Blocks",
+        "children": []
+      },
+      {
+        "name": "Misc",
+        "children": []
+      },
+      {
+        "name": "Triggers",
+        "children": []
+      },
+      {
+        "name": "Mobs",
+        "children": [
+          {
+            "name": "Hostile",
+            "children": []
+          },
+          {
+            "name": "Passive",
+            "children": []
+          },
+          {
+            "name": "Semi-hostile",
+            "children": []
+          }
+        ]
+      },
+      {
+        "name": "UI",
+        "children": []
+      },
+      {
+        "name": "Structures",
+        "children": []
+      },
+      {
+        "name": "Items",
+        "children": [
+          {
+            "name": "Disks",
+            "children": []
+          },
+          {
+            "name": "Tools",
+            "children": []
+          }
+        ]
+      }
+    ]
+  },
+  "workspaceSettings": {
+    "modid": "changed",
+    "modName": "Changed Mod",
+    "version": "0.4.0",
+    "description": "Adds the characters and enemies from Changed to Minecraft",
+    "author": "Athena.java, MCreator",
+    "websiteURL": "https://mcreator.net",
+    "license": "Academic Free License v3.0",
+    "disableForgeVersionCheck": true,
+    "serverSideOnly": false,
+    "modPicture": "changedicon",
+    "requiredMods": [],
+    "dependencies": [],
+    "dependants": [],
+    "mcreatorDependencies": [],
+    "currentGenerator": "forge-1.19.2",
+    "credits": "Created using mod maker MCreator - https://mcreator.net/about",
+    "modElementsPackage": "net.mcreator.changedmod",
+    "lockBaseModFiles": false
+  },
+  "mcreatorVersion": 202200348217
+}

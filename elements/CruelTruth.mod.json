@@ -1,0 +1,21 @@
+{
+  "_fv": 34,
+  "_type": "musicdisc",
+  "definition": {
+    "name": "Cruel Truth",
+    "texture": "crueltruth",
+    "description": "Shizi - Cruel Truth",
+    "creativeTab": {
+      "value": "CUSTOM:Changed"
+    },
+    "specialInfo": [
+      "Bonus 1"
+    ],
+    "hasGlow": false,
+    "music": {
+      "value": "CUSTOM:crueltruth"
+    },
+    "lengthInTicks": 0,
+    "analogOutput": 0
+  }
+}

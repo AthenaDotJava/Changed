@@ -1,0 +1,21 @@
+{
+  "_fv": 34,
+  "_type": "musicdisc",
+  "definition": {
+    "name": "Outside Of The Tower",
+    "texture": "outsideoftthetower",
+    "description": "Shizi - Outside Of The Tower",
+    "creativeTab": {
+      "value": "CUSTOM:Changed"
+    },
+    "specialInfo": [
+      "Track 21"
+    ],
+    "hasGlow": false,
+    "music": {
+      "value": "CUSTOM:outsideofthetower"
+    },
+    "lengthInTicks": 0,
+    "analogOutput": 0
+  }
+}

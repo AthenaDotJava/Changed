@@ -1,0 +1,9 @@
+{
+  "parent": "changed:custom/drain",
+  "textures": {
+    "all": "changed:blocks/drain",
+    "particle": "changed:blocks/drain",
+    "0": "changed:blocks/drain"
+  },
+  "render_type": "solid"
+}

@@ -1,0 +1,27 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "changed:block/bar_straight"
+    },
+    "facing=east": {
+      "model": "changed:block/bar_straight",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "changed:block/bar_straight",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "changed:block/bar_straight",
+      "y": 270
+    },
+    "facing=up": {
+      "model": "changed:block/bar_straight",
+      "x": 270
+    },
+    "facing=down": {
+      "model": "changed:block/bar_straight",
+      "x": 90
+    }
+  }
+}

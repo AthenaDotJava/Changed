@@ -1,0 +1,21 @@
+{
+  "_fv": 34,
+  "_type": "musicdisc",
+  "definition": {
+    "name": "Gas Room",
+    "texture": "gasroom",
+    "description": "Shizi - Gas Room",
+    "creativeTab": {
+      "value": "CUSTOM:Changed"
+    },
+    "specialInfo": [
+      "Track 12"
+    ],
+    "hasGlow": false,
+    "music": {
+      "value": "CUSTOM:gasroom"
+    },
+    "lengthInTicks": 0,
+    "analogOutput": 0
+  }
+}

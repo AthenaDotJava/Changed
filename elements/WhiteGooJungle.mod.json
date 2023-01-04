@@ -1,0 +1,21 @@
+{
+  "_fv": 34,
+  "_type": "musicdisc",
+  "definition": {
+    "name": "White Goo Jungle",
+    "texture": "whitegoojungle",
+    "description": "Shizi - White Goo Jungle",
+    "creativeTab": {
+      "value": "CUSTOM:Changed"
+    },
+    "specialInfo": [
+      "Track 16"
+    ],
+    "hasGlow": false,
+    "music": {
+      "value": "CUSTOM:whitegoojungle"
+    },
+    "lengthInTicks": 0,
+    "analogOutput": 0
+  }
+}

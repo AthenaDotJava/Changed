@@ -1,0 +1,57 @@
+{
+  "_fv": 34,
+  "_type": "gui",
+  "definition": {
+    "type": 0,
+    "width": 0,
+    "height": 166,
+    "inventoryOffsetX": 0,
+    "inventoryOffsetY": 0,
+    "renderBgLayer": true,
+    "doesPauseGame": true,
+    "components": [
+      {
+        "type": "image",
+        "data": {
+          "image": "terminalui.png",
+          "use1Xscale": false,
+          "name": "terminalui.png",
+          "x": 113,
+          "y": 43
+        }
+      },
+      {
+        "type": "textfield",
+        "data": {
+          "placeholder": "Pass",
+          "width": 120,
+          "height": 20,
+          "name": "TextInput",
+          "x": 155,
+          "y": 95
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "Enter",
+          "onClick": {
+            "name": "PassSetAndTest"
+          },
+          "width": 51,
+          "height": 20,
+          "name": "Enter",
+          "x": 188,
+          "y": 154
+        }
+      }
+    ],
+    "gridSettings": {
+      "sx": 18,
+      "sy": 18,
+      "ox": 11,
+      "oy": 15,
+      "snapOnGrid": false
+    }
+  }
+}

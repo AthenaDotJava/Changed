@@ -1,0 +1,17 @@
+{
+  "_fv": 34,
+  "_type": "tag",
+  "definition": {
+    "type": "Entities",
+    "items": [],
+    "blocks": [],
+    "functions": [],
+    "entities": [
+      {
+        "value": "CUSTOM:Puro"
+      }
+    ],
+    "name": "black_latex",
+    "namespace": "changed"
+  }
+}

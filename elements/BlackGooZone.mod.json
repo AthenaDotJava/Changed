@@ -1,0 +1,21 @@
+{
+  "_fv": 34,
+  "_type": "musicdisc",
+  "definition": {
+    "name": "Black Goo Zone",
+    "texture": "blackgoozone",
+    "description": "Black Goo Zone - Shizi",
+    "creativeTab": {
+      "value": "CUSTOM:Changed"
+    },
+    "specialInfo": [
+      "Track 03"
+    ],
+    "hasGlow": false,
+    "music": {
+      "value": "CUSTOM:blackgoozone"
+    },
+    "lengthInTicks": 0,
+    "analogOutput": 0
+  }
+}

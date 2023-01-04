@@ -1,0 +1,9 @@
+{
+  "parent": "changed:custom/terminal",
+  "textures": {
+    "all": "changed:blocks/terminal",
+    "particle": "changed:blocks/terminal",
+    "0": "changed:blocks/terminal"
+  },
+  "render_type": "cutout"
+}

@@ -1,0 +1,39 @@
+{
+  "_fv": 34,
+  "_type": "gui",
+  "definition": {
+    "type": 0,
+    "width": 0,
+    "height": 0,
+    "inventoryOffsetX": 0,
+    "inventoryOffsetY": 0,
+    "renderBgLayer": true,
+    "doesPauseGame": false,
+    "components": [
+      {
+        "type": "button",
+        "data": {
+          "text": "Leave Capsule",
+          "onClick": {
+            "name": "CloseUI"
+          },
+          "width": 93,
+          "height": 20,
+          "name": "Leave Capsule",
+          "x": 168,
+          "y": 176
+        }
+      }
+    ],
+    "onClosed": {
+      "name": "CapsuleWake2"
+    },
+    "gridSettings": {
+      "sx": 18,
+      "sy": 18,
+      "ox": 18,
+      "oy": 18,
+      "snapOnGrid": false
+    }
+  }
+}

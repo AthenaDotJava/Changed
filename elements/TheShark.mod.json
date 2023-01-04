@@ -1,0 +1,21 @@
+{
+  "_fv": 34,
+  "_type": "musicdisc",
+  "definition": {
+    "name": "The Shark",
+    "texture": "theshark",
+    "description": "Shizi - The Shark",
+    "creativeTab": {
+      "value": "CUSTOM:Changed"
+    },
+    "specialInfo": [
+      "Track 14"
+    ],
+    "hasGlow": false,
+    "music": {
+      "value": "CUSTOM:theshark"
+    },
+    "lengthInTicks": 0,
+    "analogOutput": 0
+  }
+}

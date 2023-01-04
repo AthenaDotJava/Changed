@@ -1,0 +1,9 @@
+{
+  "parent": "changed:custom/caution_floor",
+  "textures": {
+    "all": "changed:blocks/caution_floor",
+    "particle": "changed:blocks/caution_floor",
+    "0": "changed:blocks/caution_floor"
+  },
+  "render_type": "cutout"
+}

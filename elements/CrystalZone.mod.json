@@ -1,0 +1,21 @@
+{
+  "_fv": 34,
+  "_type": "musicdisc",
+  "definition": {
+    "name": "Crystal Zone",
+    "texture": "crystalzone",
+    "description": "Shizi - Crystal Zone",
+    "creativeTab": {
+      "value": "CUSTOM:Changed"
+    },
+    "specialInfo": [
+      "Track 04"
+    ],
+    "hasGlow": false,
+    "music": {
+      "value": "CUSTOM:crystalzone"
+    },
+    "lengthInTicks": 0,
+    "analogOutput": 0
+  }
+}

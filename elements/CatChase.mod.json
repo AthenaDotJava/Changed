@@ -1,0 +1,21 @@
+{
+  "_fv": 34,
+  "_type": "musicdisc",
+  "definition": {
+    "name": "Cat Chase",
+    "texture": "catchase",
+    "description": "Cat Chase - Shizi",
+    "creativeTab": {
+      "value": "CUSTOM:Changed"
+    },
+    "specialInfo": [
+      "Track 02"
+    ],
+    "hasGlow": false,
+    "music": {
+      "value": "CUSTOM:catchase"
+    },
+    "lengthInTicks": 0,
+    "analogOutput": 0
+  }
+}

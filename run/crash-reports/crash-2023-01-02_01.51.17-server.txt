@@ -1,0 +1,163 @@
+---- Minecraft Crash Report ----
+// Daisy, daisy...
+
+Time: 2023-01-02 01:51:17
+Description: Ticking player
+
+java.lang.IllegalArgumentException: The min values need to be smaller or equals to the max values
+	at net.minecraft.world.phys.shapes.Shapes.box(Shapes.java:38) ~[forge-1.19.2-43.1.7_mapped_official_1.19.2-recomp.jar%23183!/:?] {re:classloading}
+	at net.minecraft.world.level.block.Block.box(Block.java:140) ~[forge-1.19.2-43.1.7_mapped_official_1.19.2-recomp.jar%23183!/:?] {re:classloading,pl:accesstransformer:B}
+	at net.mcreator.changedmod.procedures.BBoxTools.toVoxelShape(BBoxTools.java:8) ~[%23188!/:?] {re:classloading}
+	at net.mcreator.changedmod.block.CapsuleBlock.getCapsule(CapsuleBlock.java:203) ~[%23188!/:?] {re:classloading}
+	at net.mcreator.changedmod.block.CapsuleBlock.getShape(CapsuleBlock.java:140) ~[%23188!/:?] {re:classloading}
+	at net.minecraft.world.level.block.state.BlockBehaviour$BlockStateBase.getShape(BlockBehaviour.java:607) ~[forge-1.19.2-43.1.7_mapped_official_1.19.2-recomp.jar%23183!/:?] {re:classloading}
+	at net.minecraft.world.level.block.state.BlockBehaviour$BlockStateBase.getShape(BlockBehaviour.java:603) ~[forge-1.19.2-43.1.7_mapped_official_1.19.2-recomp.jar%23183!/:?] {re:classloading}
+	at net.minecraft.world.level.block.state.BlockBehaviour.getCollisionShape(BlockBehaviour.java:325) ~[forge-1.19.2-43.1.7_mapped_official_1.19.2-recomp.jar%23183!/:?] {re:classloading}
+	at net.minecraft.world.level.block.state.BlockBehaviour$BlockStateBase.getCollisionShape(BlockBehaviour.java:615) ~[forge-1.19.2-43.1.7_mapped_official_1.19.2-recomp.jar%23183!/:?] {re:classloading}
+	at net.minecraft.world.level.BlockCollisions.computeNext(BlockCollisions.java:87) ~[forge-1.19.2-43.1.7_mapped_official_1.19.2-recomp.jar%23183!/:?] {re:classloading}
+	at net.minecraft.world.level.BlockCollisions.computeNext(BlockCollisions.java:18) ~[forge-1.19.2-43.1.7_mapped_official_1.19.2-recomp.jar%23183!/:?] {re:classloading}
+	at com.google.common.collect.AbstractIterator.tryToComputeNext(AbstractIterator.java:146) ~[guava-31.0.1-jre.jar%2398!/:?] {}
+	at com.google.common.collect.AbstractIterator.hasNext(AbstractIterator.java:141) ~[guava-31.0.1-jre.jar%2398!/:?] {}
+	at com.google.common.collect.ImmutableCollection$Builder.addAll(ImmutableCollection.java:464) ~[guava-31.0.1-jre.jar%2398!/:?] {}
+	at com.google.common.collect.ImmutableList$Builder.addAll(ImmutableList.java:868) ~[guava-31.0.1-jre.jar%2398!/:?] {}
+	at net.minecraft.world.entity.Entity.collideBoundingBox(Entity.java:846) ~[forge-1.19.2-43.1.7_mapped_official_1.19.2-recomp.jar%23183!/:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.world.entity.Entity.collide(Entity.java:810) ~[forge-1.19.2-43.1.7_mapped_official_1.19.2-recomp.jar%23183!/:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.world.entity.Entity.move(Entity.java:584) ~[forge-1.19.2-43.1.7_mapped_official_1.19.2-recomp.jar%23183!/:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.world.entity.LivingEntity.handleRelativeFrictionAndCalculateMovement(LivingEntity.java:2192) ~[forge-1.19.2-43.1.7_mapped_official_1.19.2-recomp.jar%23183!/:?] {re:classloading}
+	at net.minecraft.world.entity.LivingEntity.travel(LivingEntity.java:2149) ~[forge-1.19.2-43.1.7_mapped_official_1.19.2-recomp.jar%23183!/:?] {re:classloading}
+	at net.minecraft.world.entity.player.Player.travel(Player.java:1441) ~[forge-1.19.2-43.1.7_mapped_official_1.19.2-recomp.jar%23183!/:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.world.entity.LivingEntity.aiStep(LivingEntity.java:2588) ~[forge-1.19.2-43.1.7_mapped_official_1.19.2-recomp.jar%23183!/:?] {re:classloading}
+	at net.minecraft.world.entity.player.Player.aiStep(Player.java:501) ~[forge-1.19.2-43.1.7_mapped_official_1.19.2-recomp.jar%23183!/:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.world.entity.LivingEntity.tick(LivingEntity.java:2291) ~[forge-1.19.2-43.1.7_mapped_official_1.19.2-recomp.jar%23183!/:?] {re:classloading}
+	at net.minecraft.world.entity.player.Player.tick(Player.java:243) ~[forge-1.19.2-43.1.7_mapped_official_1.19.2-recomp.jar%23183!/:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.server.level.ServerPlayer.doTick(ServerPlayer.java:447) ~[forge-1.19.2-43.1.7_mapped_official_1.19.2-recomp.jar%23183!/:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.server.network.ServerGamePacketListenerImpl.tick(ServerGamePacketListenerImpl.java:264) ~[forge-1.19.2-43.1.7_mapped_official_1.19.2-recomp.jar%23183!/:?] {re:classloading}
+	at net.minecraft.network.Connection.tick(Connection.java:248) ~[forge-1.19.2-43.1.7_mapped_official_1.19.2-recomp.jar%23183!/:?] {re:classloading}
+	at net.minecraft.server.network.ServerConnectionListener.tick(ServerConnectionListener.java:143) ~[forge-1.19.2-43.1.7_mapped_official_1.19.2-recomp.jar%23183!/:?] {re:classloading}
+	at net.minecraft.server.MinecraftServer.tickChildren(MinecraftServer.java:880) ~[forge-1.19.2-43.1.7_mapped_official_1.19.2-recomp.jar%23183!/:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.server.MinecraftServer.tickServer(MinecraftServer.java:806) ~[forge-1.19.2-43.1.7_mapped_official_1.19.2-recomp.jar%23183!/:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.client.server.IntegratedServer.tickServer(IntegratedServer.java:84) ~[forge-1.19.2-43.1.7_mapped_official_1.19.2-recomp.jar%23183!/:?] {re:classloading,pl:runtimedistcleaner:A}
+	at net.minecraft.server.MinecraftServer.runServer(MinecraftServer.java:654) ~[forge-1.19.2-43.1.7_mapped_official_1.19.2-recomp.jar%23183!/:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.server.MinecraftServer.lambda$spin$2(MinecraftServer.java:244) ~[forge-1.19.2-43.1.7_mapped_official_1.19.2-recomp.jar%23183!/:?] {re:classloading,pl:accesstransformer:B}
+	at java.lang.Thread.run(Thread.java:833) [?:?] {}
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- Head --
+Thread: Server thread
+Stacktrace:
+	at net.minecraft.world.phys.shapes.Shapes.box(Shapes.java:38) ~[forge-1.19.2-43.1.7_mapped_official_1.19.2-recomp.jar%23183!/:?] {re:classloading}
+	at net.minecraft.world.level.block.Block.box(Block.java:140) ~[forge-1.19.2-43.1.7_mapped_official_1.19.2-recomp.jar%23183!/:?] {re:classloading,pl:accesstransformer:B}
+	at net.mcreator.changedmod.procedures.BBoxTools.toVoxelShape(BBoxTools.java:8) ~[%23188!/:?] {re:classloading}
+	at net.mcreator.changedmod.block.CapsuleBlock.getCapsule(CapsuleBlock.java:203) ~[%23188!/:?] {re:classloading}
+	at net.mcreator.changedmod.block.CapsuleBlock.getShape(CapsuleBlock.java:140) ~[%23188!/:?] {re:classloading}
+	at net.minecraft.world.level.block.state.BlockBehaviour$BlockStateBase.getShape(BlockBehaviour.java:607) ~[forge-1.19.2-43.1.7_mapped_official_1.19.2-recomp.jar%23183!/:?] {re:classloading}
+	at net.minecraft.world.level.block.state.BlockBehaviour$BlockStateBase.getShape(BlockBehaviour.java:603) ~[forge-1.19.2-43.1.7_mapped_official_1.19.2-recomp.jar%23183!/:?] {re:classloading}
+	at net.minecraft.world.level.block.state.BlockBehaviour.getCollisionShape(BlockBehaviour.java:325) ~[forge-1.19.2-43.1.7_mapped_official_1.19.2-recomp.jar%23183!/:?] {re:classloading}
+	at net.minecraft.world.level.block.state.BlockBehaviour$BlockStateBase.getCollisionShape(BlockBehaviour.java:615) ~[forge-1.19.2-43.1.7_mapped_official_1.19.2-recomp.jar%23183!/:?] {re:classloading}
+	at net.minecraft.world.level.BlockCollisions.computeNext(BlockCollisions.java:87) ~[forge-1.19.2-43.1.7_mapped_official_1.19.2-recomp.jar%23183!/:?] {re:classloading}
+	at net.minecraft.world.level.BlockCollisions.computeNext(BlockCollisions.java:18) ~[forge-1.19.2-43.1.7_mapped_official_1.19.2-recomp.jar%23183!/:?] {re:classloading}
+	at com.google.common.collect.AbstractIterator.tryToComputeNext(AbstractIterator.java:146) ~[guava-31.0.1-jre.jar%2398!/:?] {}
+	at com.google.common.collect.AbstractIterator.hasNext(AbstractIterator.java:141) ~[guava-31.0.1-jre.jar%2398!/:?] {}
+	at com.google.common.collect.ImmutableCollection$Builder.addAll(ImmutableCollection.java:464) ~[guava-31.0.1-jre.jar%2398!/:?] {}
+	at com.google.common.collect.ImmutableList$Builder.addAll(ImmutableList.java:868) ~[guava-31.0.1-jre.jar%2398!/:?] {}
+	at net.minecraft.world.entity.Entity.collideBoundingBox(Entity.java:846) ~[forge-1.19.2-43.1.7_mapped_official_1.19.2-recomp.jar%23183!/:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.world.entity.Entity.collide(Entity.java:810) ~[forge-1.19.2-43.1.7_mapped_official_1.19.2-recomp.jar%23183!/:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.world.entity.Entity.move(Entity.java:584) ~[forge-1.19.2-43.1.7_mapped_official_1.19.2-recomp.jar%23183!/:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.world.entity.LivingEntity.handleRelativeFrictionAndCalculateMovement(LivingEntity.java:2192) ~[forge-1.19.2-43.1.7_mapped_official_1.19.2-recomp.jar%23183!/:?] {re:classloading}
+	at net.minecraft.world.entity.LivingEntity.travel(LivingEntity.java:2149) ~[forge-1.19.2-43.1.7_mapped_official_1.19.2-recomp.jar%23183!/:?] {re:classloading}
+	at net.minecraft.world.entity.player.Player.travel(Player.java:1441) ~[forge-1.19.2-43.1.7_mapped_official_1.19.2-recomp.jar%23183!/:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.world.entity.LivingEntity.aiStep(LivingEntity.java:2588) ~[forge-1.19.2-43.1.7_mapped_official_1.19.2-recomp.jar%23183!/:?] {re:classloading}
+	at net.minecraft.world.entity.player.Player.aiStep(Player.java:501) ~[forge-1.19.2-43.1.7_mapped_official_1.19.2-recomp.jar%23183!/:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.world.entity.LivingEntity.tick(LivingEntity.java:2291) ~[forge-1.19.2-43.1.7_mapped_official_1.19.2-recomp.jar%23183!/:?] {re:classloading}
+	at net.minecraft.world.entity.player.Player.tick(Player.java:243) ~[forge-1.19.2-43.1.7_mapped_official_1.19.2-recomp.jar%23183!/:?] {re:classloading,pl:accesstransformer:B}
+-- Player being ticked --
+Details:
+	Entity Type: minecraft:player (net.minecraft.server.level.ServerPlayer)
+	Entity ID: 1
+	Entity Name: Dev
+	Entity's Exact location: 16.51, 56.00, -0.70
+	Entity's Block location: World: (16,56,-1), Section: (at 0,8,15 in 1,3,-1; chunk contains blocks 16,-64,-16 to 31,319,-1), Region: (0,-1; contains chunks 0,-32 to 31,-1, blocks 0,-64,-512 to 511,319,-1)
+	Entity's Momentum: 0.00, -0.08, 0.00
+	Entity's Passengers: []
+	Entity's Vehicle: null
+Stacktrace:
+	at net.minecraft.server.level.ServerPlayer.doTick(ServerPlayer.java:447) ~[forge-1.19.2-43.1.7_mapped_official_1.19.2-recomp.jar%23183!/:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.server.network.ServerGamePacketListenerImpl.tick(ServerGamePacketListenerImpl.java:264) ~[forge-1.19.2-43.1.7_mapped_official_1.19.2-recomp.jar%23183!/:?] {re:classloading}
+	at net.minecraft.network.Connection.tick(Connection.java:248) ~[forge-1.19.2-43.1.7_mapped_official_1.19.2-recomp.jar%23183!/:?] {re:classloading}
+	at net.minecraft.server.network.ServerConnectionListener.tick(ServerConnectionListener.java:143) ~[forge-1.19.2-43.1.7_mapped_official_1.19.2-recomp.jar%23183!/:?] {re:classloading}
+	at net.minecraft.server.MinecraftServer.tickChildren(MinecraftServer.java:880) ~[forge-1.19.2-43.1.7_mapped_official_1.19.2-recomp.jar%23183!/:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.server.MinecraftServer.tickServer(MinecraftServer.java:806) ~[forge-1.19.2-43.1.7_mapped_official_1.19.2-recomp.jar%23183!/:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.client.server.IntegratedServer.tickServer(IntegratedServer.java:84) ~[forge-1.19.2-43.1.7_mapped_official_1.19.2-recomp.jar%23183!/:?] {re:classloading,pl:runtimedistcleaner:A}
+	at net.minecraft.server.MinecraftServer.runServer(MinecraftServer.java:654) ~[forge-1.19.2-43.1.7_mapped_official_1.19.2-recomp.jar%23183!/:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.server.MinecraftServer.lambda$spin$2(MinecraftServer.java:244) ~[forge-1.19.2-43.1.7_mapped_official_1.19.2-recomp.jar%23183!/:?] {re:classloading,pl:accesstransformer:B}
+	at java.lang.Thread.run(Thread.java:833) [?:?] {}
+
+
+-- System Details --
+Details:
+	Minecraft Version: 1.19.2
+	Minecraft Version ID: 1.19.2
+	Operating System: Windows 10 (amd64) version 10.0
+	Java Version: 17.0.3, Eclipse Adoptium
+	Java VM Version: OpenJDK 64-Bit Server VM (mixed mode, sharing), Eclipse Adoptium
+	Memory: 2083014144 bytes (1986 MiB) / 3644850176 bytes (3476 MiB) up to 8434745344 bytes (8044 MiB)
+	CPUs: 4
+	Processor Vendor: GenuineIntel
+	Processor Name: Intel(R) Core(TM) i7-7600U CPU @ 2.80GHz
+	Identifier: Intel64 Family 6 Model 142 Stepping 9
+	Microarchitecture: Amber Lake
+	Frequency (GHz): 2.90
+	Number of physical packages: 1
+	Number of physical CPUs: 2
+	Number of logical CPUs: 4
+	Graphics card #0 name: Intel(R) HD Graphics 620
+	Graphics card #0 vendor: Intel Corporation (0x8086)
+	Graphics card #0 VRAM (MB): 1024.00
+	Graphics card #0 deviceId: 0x5916
+	Graphics card #0 versionInfo: DriverVersion=31.0.101.2111
+	Memory slot #0 capacity (MB): 16384.00
+	Memory slot #0 clockSpeed (GHz): 2.13
+	Memory slot #0 type: DDR4
+	Memory slot #1 capacity (MB): 16384.00
+	Memory slot #1 clockSpeed (GHz): 2.13
+	Memory slot #1 type: DDR4
+	Virtual memory max (MB): 37031.21
+	Virtual memory used (MB): 20077.33
+	Swap memory total (MB): 4864.00
+	Swap memory used (MB): 181.38
+	JVM Flags: 1 total; -XX:HeapDumpPath=MojangTricksIntelDriversForPerformance_javaw.exe_minecraft.exe.heapdump
+	Server Running: true
+	Player Count: 1 / 8; [ServerPlayer['Dev'/1, l='ServerLevel[Structures]', x=16.51, y=56.00, z=-0.70]]
+	Data Packs: vanilla, mod:forge, mod:changed
+	World Generation: Stable
+	Type: Integrated Server (map_client.txt)
+	Is Modded: Definitely; Client brand changed to 'forge'; Server brand changed to 'forge'
+	Launched Version: MOD_DEV
+	ModLauncher: 10.0.8+10.0.8+main.0ef7e830
+	ModLauncher launch target: forgeclientuserdev
+	ModLauncher naming: mcp
+	ModLauncher services: 
+		mixin-0.8.5.jar mixin PLUGINSERVICE 
+		eventbus-6.0.3.jar eventbus PLUGINSERVICE 
+		fmlloader-1.19.2-43.1.7.jar slf4jfixer PLUGINSERVICE 
+		fmlloader-1.19.2-43.1.7.jar object_holder_definalize PLUGINSERVICE 
+		fmlloader-1.19.2-43.1.7.jar runtime_enum_extender PLUGINSERVICE 
+		fmlloader-1.19.2-43.1.7.jar capability_token_subclass PLUGINSERVICE 
+		accesstransformers-8.0.4.jar accesstransformer PLUGINSERVICE 
+		fmlloader-1.19.2-43.1.7.jar runtimedistcleaner PLUGINSERVICE 
+		modlauncher-10.0.8.jar mixin TRANSFORMATIONSERVICE 
+		modlauncher-10.0.8.jar fml TRANSFORMATIONSERVICE 
+	FML Language Providers: 
+		minecraft@1.0
+		lowcodefml@null
+		javafml@null
+	Mod List: 
+		forge-1.19.2-43.1.7_mapped_official_1.19.2-recomp.|Minecraft                     |minecraft                     |1.19.2              |DONE      |Manifest: a1:d4:5e:04:4f:d3:d6:e0:7b:37:97:cf:77:b0:de:ad:4a:47:ce:8c:96:49:5f:0a:cf:8c:ae:b2:6d:4b:8a:3f
+		                                                  |Forge                         |forge                         |43.1.7              |DONE      |Manifest: NOSIGNATURE
+		main                                              |Changed Mod                   |changed                       |0.4.0               |DONE      |Manifest: NOSIGNATURE
+	Crash Report UUID: c0408fb7-1758-4e2d-8cbf-f3787a48867b
+	FML: 43.1
+	Forge: net.minecraftforge:43.1.7
