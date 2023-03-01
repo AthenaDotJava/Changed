@@ -1,7 +1,7 @@
 
 package net.mcreator.changedmod.block;
 
-import net.minecraft.world.level.block.state.properties.IntegerProperty;
+import net.minecraft.world.level.block.state.properties.*;
 import net.minecraftforge.network.NetworkHooks;
 
 import net.minecraft.world.phys.shapes.VoxelShape;
@@ -12,9 +12,6 @@ import net.minecraft.world.level.storage.loot.LootContext;
 import net.minecraft.world.level.material.Material;
 import net.minecraft.world.level.material.Fluids;
 import net.minecraft.world.level.material.FluidState;
-import net.minecraft.world.level.block.state.properties.DirectionProperty;
-import net.minecraft.world.level.block.state.properties.BooleanProperty;
-import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.BlockBehaviour;
@@ -43,6 +40,7 @@ import net.minecraft.core.Direction;
 import net.minecraft.core.BlockPos;
 
 import net.mcreator.changedmod.world.inventory.TerminalUIMenu;
+import net.mcreator.changedmod.utils.CardTypes;
 
 import java.util.List;
 import java.util.Collections;
@@ -55,13 +53,15 @@ public class TerminalBlock extends Block implements SimpleWaterloggedBlock
 	public static final DirectionProperty FACING = HorizontalDirectionalBlock.FACING;
 	public static final BooleanProperty WATERLOGGED = BlockStateProperties.WATERLOGGED;
 	public static final BooleanProperty PASS_SET = BooleanProperty.create("pass_set");
-	public static String pass = "";
+	public static final BooleanProperty POWERED = BooleanProperty.create("powered");
+	public static final EnumProperty<CardTypes> CARD = EnumProperty.create("card_type", CardTypes.class);
 
 	public TerminalBlock() {
 		super(BlockBehaviour.Properties.of(Material.METAL).sound(SoundType.METAL).strength(10f).requiresCorrectToolForDrops().noOcclusion()
 				.isRedstoneConductor((bs, br, bp) -> false));
 		this.registerDefaultState(this.stateDefinition.any().setValue(FACING, Direction.NORTH).setValue(WATERLOGGED, false)
-				.setValue(PASS_SET, false)
+				.setValue(PASS_SET, false).setValue(POWERED, false)
+				.setValue(CARD, CardTypes.WHITE)
 		);
 	}
 
@@ -97,7 +97,10 @@ public class TerminalBlock extends Block implements SimpleWaterloggedBlock
 
 	@Override
 	protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> builder) {
-		builder.add(FACING, WATERLOGGED, PASS_SET);
+		builder.add(FACING, WATERLOGGED
+				,PASS_SET , POWERED
+				, CARD
+		);
 	}
 
 	@Override
@@ -163,4 +166,5 @@ public class TerminalBlock extends Block implements SimpleWaterloggedBlock
 		}
 		return InteractionResult.SUCCESS;
 	}
+
 }

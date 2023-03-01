@@ -64,7 +64,7 @@ public class TerminalUIButtonMessage {
 			return;
 		if (buttonID == 0) {
 
-			PassSetAndTestProcedure.execute();
+			PassSetAndTestProcedure.execute(world, x, y, z, entity, guistate);
 		}
 	}
 

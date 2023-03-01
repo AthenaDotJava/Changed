@@ -31,6 +31,7 @@ import net.mcreator.changedmod.item.PURODANCEItem;
 import net.mcreator.changedmod.item.OutsideTheTowerItem;
 import net.mcreator.changedmod.item.LionChaseItem;
 import net.mcreator.changedmod.item.LaboratoryItem;
+import net.mcreator.changedmod.item.KeyCardItem;
 import net.mcreator.changedmod.item.GasRoomItem;
 import net.mcreator.changedmod.item.FinaleItem;
 import net.mcreator.changedmod.item.CrystalZoneItem;
@@ -85,6 +86,7 @@ public class ChangedModItems {
 	public static final RegistryObject<Item> WRENCH = REGISTRY.register("wrench", () -> new WrenchItem());
 	public static final RegistryObject<Item> CAPSULE = block(ChangedModBlocks.CAPSULE, ChangedModTabs.TAB_CHANGED);
 	public static final RegistryObject<Item> TERMINAL = block(ChangedModBlocks.TERMINAL, ChangedModTabs.TAB_CHANGED);
+	public static final RegistryObject<Item> KEY_CARD = REGISTRY.register("key_card", () -> new KeyCardItem());
 
 	private static RegistryObject<Item> block(RegistryObject<Block> block, CreativeModeTab tab) {
 		return REGISTRY.register(block.getId().getPath(), () -> new BlockItem(block.get(), new Item.Properties().tab(tab)));

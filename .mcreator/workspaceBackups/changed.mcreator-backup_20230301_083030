@@ -31,7 +31,7 @@
           }
         ]
       },
-      "path": "~/Triggers"
+      "path": "~/Procedures"
     },
     {
       "name": "Puro",
@@ -66,7 +66,7 @@
           }
         ]
       },
-      "path": "~/Triggers"
+      "path": "~/Procedures"
     },
     {
       "name": "DrainGooPassThrough",
@@ -87,7 +87,7 @@
           }
         ]
       },
-      "path": "~/Triggers"
+      "path": "~/Procedures"
     },
     {
       "name": "Drain",
@@ -171,7 +171,7 @@
       "metadata": {
         "dependencies": []
       },
-      "path": "~/Triggers"
+      "path": "~/Procedures"
     },
     {
       "name": "CautionFloor",
@@ -197,7 +197,7 @@
           }
         ]
       },
-      "path": "~/Triggers"
+      "path": "~/Procedures"
     },
     {
       "name": "TheWhiteKnight",
@@ -482,7 +482,7 @@
           }
         ]
       },
-      "path": "~/Triggers"
+      "path": "~/Procedures"
     },
     {
       "name": "VentOpenProcedure",
@@ -515,7 +515,7 @@
           }
         ]
       },
-      "path": "~/Triggers"
+      "path": "~/Procedures"
     },
     {
       "name": "Bar",
@@ -553,7 +553,7 @@
           }
         ]
       },
-      "path": "~/Triggers"
+      "path": "~/Procedures"
     },
     {
       "name": "Wrench",
@@ -599,7 +599,7 @@
           }
         ]
       },
-      "path": "~/Triggers"
+      "path": "~/Procedures"
     },
     {
       "name": "Capsule",
@@ -641,7 +641,7 @@
           }
         ]
       },
-      "path": "~/Triggers"
+      "path": "~/Procedures"
     },
     {
       "name": "CapsulePlacementCondition",
@@ -671,7 +671,7 @@
           }
         ]
       },
-      "path": "~/Triggers"
+      "path": "~/Procedures"
     },
     {
       "name": "CapsuleWake",
@@ -704,7 +704,7 @@
           }
         ]
       },
-      "path": "~/Triggers"
+      "path": "~/Procedures"
     },
     {
       "name": "CapsuleSleepUI",
@@ -742,7 +742,7 @@
           }
         ]
       },
-      "path": "~/Triggers"
+      "path": "~/Procedures"
     },
     {
       "name": "CapsulePlace",
@@ -771,7 +771,7 @@
           }
         ]
       },
-      "path": "~/Triggers"
+      "path": "~/Procedures"
     },
     {
       "name": "CloseUI",
@@ -788,7 +788,7 @@
           }
         ]
       },
-      "path": "~/Triggers"
+      "path": "~/Procedures"
     },
     {
       "name": "CapsuleDelete",
@@ -821,7 +821,7 @@
           }
         ]
       },
-      "path": "~/Triggers"
+      "path": "~/Procedures"
     },
     {
       "name": "Terminal",
@@ -846,12 +846,96 @@
       "type": "procedure",
       "sortid": 67,
       "compiles": true,
-      "locked_code": false,
+      "locked_code": true,
       "registry_name": "pass_set_and_test",
       "metadata": {
-        "dependencies": []
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "guistate",
+            "type": "map"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
       },
-      "path": "~/Triggers"
+      "path": "~/Procedures"
+    },
+    {
+      "name": "PowerRedstone",
+      "type": "procedure",
+      "sortid": 68,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "power_redstone",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures"
+    },
+    {
+      "name": "KeyCard",
+      "type": "item",
+      "sortid": 69,
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "key_card",
+      "path": "~/Items/Misc"
+    },
+    {
+      "name": "CardSwipe",
+      "type": "procedure",
+      "sortid": 70,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "card_swipe",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Procedures"
     }
   ],
   "variable_elements": [],
@@ -1075,15 +1159,16 @@
       "entity.changedmod.puro": "Puro",
       "subtitles.puroandtheblackgoo": "",
       "subtitles.ost": "",
-      "subtitles.crystaldragon": "",
       "item.changed.the_white_knight": "The White Knight",
-      "block.changed.caution_floor": "Caution Floor",
+      "subtitles.crystaldragon": "",
       "item.changed.cat_chase": "Cat Chase",
+      "block.changed.caution_floor": "Caution Floor",
       "subtitles.catchase": "",
       "item.changed.crystal_dragon.desc": "Shizi - Crystal Dragon",
       "item.changed.outside_the_tower.desc": "Shizi - Outside Of The Tower",
       "subtitles.ventpipe": "",
       "item.changed.birthday_song": "Birthday Song",
+      "item.changed.key_card": "Key Card",
       "item.changed.lion_chase.desc": "ShizI - Lion Chase",
       "block.changed.save_station": "Save Station",
       "entity.changed.white_goo_blob": "White Goo Blob",
@@ -1106,12 +1191,12 @@
       "item.changed.finale": "Finale",
       "item.changed.tiger_shark_spawn_egg": "Tiger Shark Spawn Egg",
       "item.changed.cruel_truth": "Cruel Truth",
-      "item.changed.white_tail_chase_part_1": "White Tail Chase Part 1",
       "block.changed.drain": "Drain",
+      "item.changed.white_tail_chase_part_1": "White Tail Chase Part 1",
       "item.changed.white_tail_chase_part_2": "White Tail Chase Part 2",
       "item.changed.squid_dog": "The Squid Dog",
-      "subtitles.thewhiteknight": "",
       "item.changed.vent_pipe.desc": "Shizi - Vent Pipe",
+      "subtitles.thewhiteknight": "",
       "itemGroup.tabchanged": "Changed",
       "item.changed.black_goo_zone": "Black Goo Zone",
       "item.changed.white_goo_jungle": "White Goo Jungle",
@@ -1174,7 +1259,7 @@
         "children": []
       },
       {
-        "name": "Triggers",
+        "name": "Procedures",
         "children": []
       },
       {
@@ -1212,6 +1297,10 @@
           {
             "name": "Tools",
             "children": []
+          },
+          {
+            "name": "Misc",
+            "children": []
           }
         ]
       }
@@ -1222,7 +1311,7 @@
     "modName": "Changed Mod",
     "version": "0.4.0",
     "description": "Adds the characters and enemies from Changed to Minecraft",
-    "author": "Athena.java, MCreator",
+    "author": "Athena.java",
     "websiteURL": "https://mcreator.net",
     "license": "Academic Free License v3.0",
     "disableForgeVersionCheck": true,
