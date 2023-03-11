@@ -1,8 +1,10 @@
 
 package net.mcreator.changedmod.block;
 
+import net.mcreator.changedmod.init.ChangedModItems;
 import net.mcreator.changedmod.procedures.BarConnectionProcedure;
 import net.mcreator.changedmod.procedures.BarDirectionChangeProcedure;
+import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.player.Player;
@@ -522,18 +524,16 @@ public class BarBlock extends Block implements SimpleWaterloggedBlock
 }
 	@Override
 	public InteractionResult use(BlockState blockstate, Level world, BlockPos pos, Player entity, InteractionHand hand, BlockHitResult hit) {
-		super.use(blockstate, world, pos, entity, hand, hit);
-		int x = pos.getX();
-		int y = pos.getY();
-		int z = pos.getZ();
-		double hitX = hit.getLocation().x;
-		double hitY = hit.getLocation().y;
-		double hitZ = hit.getLocation().z;
-		Direction direction = hit.getDirection();
+		if (entity.getMainHandItem().getItem() == ChangedModItems.WRENCH.get()) {
+			int x = pos.getX();
+			int y = pos.getY();
+			int z = pos.getZ();
 
-		BarDirectionChangeProcedure.execute(world, x, y, z, blockstate, entity);
-		BarConnectionProcedure.execute(world, x, y, z);
-		return InteractionResult.SUCCESS;
+			BarDirectionChangeProcedure.execute(world, x, y, z, blockstate, entity);
+			BarConnectionProcedure.execute(world, x, y, z);
+			return InteractionResult.SUCCESS;
+		}
+		return InteractionResult.FAIL;
 	}
 	@Override
 	public void onPlace(BlockState blockstate, Level world, BlockPos pos, BlockState oldState, boolean moving) {

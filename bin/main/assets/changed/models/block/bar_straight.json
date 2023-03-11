@@ -1,9 +1,0 @@
-{
-  "parent": "changed:custom/barstr",
-  "textures": {
-    "all": "changed:blocks/barstr",
-    "particle": "changed:blocks/barstr",
-    "0": "changed:blocks/barstr"
-  },
-  "render_type": "cutout"
-}

@@ -1,0 +1,9 @@
+{
+  "parent": "changed:custom/capsuletop",
+  "textures": {
+    "all": "changed:blocks/capsuletop",
+    "particle": "changed:blocks/capsuletop",
+    "1": "changed:blocks/capsuletop"
+  },
+  "render_type": "cutout"
+}

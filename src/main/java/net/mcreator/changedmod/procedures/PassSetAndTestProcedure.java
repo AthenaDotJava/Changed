@@ -1,6 +1,6 @@
 package net.mcreator.changedmod.procedures;
 
-import net.mcreator.changedmod.utils.PlayerUtils;
+import utils.PlayerUtils;
 import net.minecraft.world.level.block.state.properties.IntegerProperty;
 import net.minecraft.world.level.block.state.properties.BooleanProperty;
 import net.minecraft.world.level.block.state.BlockState;

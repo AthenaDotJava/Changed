@@ -1,6 +1,15 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "changed:items/wcard"
-  }
+    "layer0": "changed:items/cards/blankcard"
+  },
+  "overrides" : [
+    {"predicate": {"custom_model_data": 0}, "model": "changed:item/card/blankcard"},
+    {"predicate": {"custom_model_data": 1}, "model": "changed:item/card/bcard"},
+    {"predicate": {"custom_model_data": 2}, "model": "changed:item/card/gcard"},
+    {"predicate": {"custom_model_data": 3}, "model": "changed:item/card/ycard"},
+    {"predicate": {"custom_model_data": 4}, "model": "changed:item/card/pcard"},
+    {"predicate": {"custom_model_data": 5}, "model": "changed:item/card/rcard"},
+    {"predicate": {"custom_model_data": 6}, "model": "changed:item/card/wcard"}
+  ]
 }

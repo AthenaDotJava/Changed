@@ -13,6 +13,7 @@ import net.minecraft.world.level.block.Block;
 import net.mcreator.changedmod.block.VentBlock;
 import net.mcreator.changedmod.block.TerminalBlock;
 import net.mcreator.changedmod.block.SaveStationBlock;
+import net.mcreator.changedmod.block.PhotoPileBlock;
 import net.mcreator.changedmod.block.DrainBlock;
 import net.mcreator.changedmod.block.CautionFloorBlock;
 import net.mcreator.changedmod.block.CapsuleBlock;
@@ -28,4 +29,5 @@ public class ChangedModBlocks {
 	public static final RegistryObject<Block> BAR = REGISTRY.register("bar", () -> new BarBlock());
 	public static final RegistryObject<Block> CAPSULE = REGISTRY.register("capsule", () -> new CapsuleBlock());
 	public static final RegistryObject<Block> TERMINAL = REGISTRY.register("terminal", () -> new TerminalBlock());
+	public static final RegistryObject<Block> PHOTO_PILE = REGISTRY.register("photo_pile", () -> new PhotoPileBlock());
 }

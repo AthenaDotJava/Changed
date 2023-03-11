@@ -1,7 +1,7 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "changed:items/save_station_item"
+    "layer0": "changed:items/sstationitem"
   },
   "render_type": "translucent"
 }

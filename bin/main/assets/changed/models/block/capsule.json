@@ -1,0 +1,9 @@
+{
+  "parent": "changed:custom/capsulebottom",
+  "textures": {
+    "all": "changed:blocks/capsulebottom",
+    "particle": "changed:blocks/capsulebottom",
+    "0": "changed:blocks/capsulebottom"
+  },
+  "render_type": "cutout"
+}

@@ -8,10 +8,11 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.network.chat.Component;
-import net.minecraft.core.Direction;
 import net.minecraft.core.BlockPos;
 import net.minecraft.commands.CommandSourceStack;
 import net.minecraft.commands.CommandSource;
+
+import net.minecraft.core.Direction;
 
 public class CapsuleWakeProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z, BlockState blockstate) {

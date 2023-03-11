@@ -9,8 +9,10 @@ import net.minecraft.core.BlockPos;
 
 public class PowerRedstoneProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity) {
-		if (entity == null)
+		if (entity == null) {
+			System.out.println("Null Entity");
 			return;
+		}
 		if (0 == ((world.getBlockState(new BlockPos(x, y, z))).getBlock().getStateDefinition().getProperty("power") instanceof IntegerProperty _getip1
 				? (world.getBlockState(new BlockPos(x, y, z))).getValue(_getip1)
 				: -1)) {

@@ -65,4 +65,8 @@ public class ChangedModSounds {
 			() -> new SoundEvent(new ResourceLocation("changed", "purodance")));
 	public static final RegistryObject<SoundEvent> GASROOM = REGISTRY.register("gasroom",
 			() -> new SoundEvent(new ResourceLocation("changed", "gasroom")));
+	public static final RegistryObject<SoundEvent> TERMINAL_SUCCESS = REGISTRY.register("terminal.success",
+			() -> new SoundEvent(new ResourceLocation("changed", "terminal.success")));
+	public static final RegistryObject<SoundEvent> TERMINAL_FAIL = REGISTRY.register("terminal.fail",
+			() -> new SoundEvent(new ResourceLocation("changed", "terminal.fail")));
 }

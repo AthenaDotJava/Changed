@@ -2,6 +2,7 @@
   "replace": false,
   "values": [
     "changed:save_station",
-    "changed:vent_open"
+    "changed:capsule",
+    "changed:terminal"
   ]
 }

@@ -2,7 +2,11 @@
 package net.mcreator.changedmod.block;
 
 import net.mcreator.changedmod.procedures.*;
+import utils.BBoxTools;
+import net.minecraft.server.level.ServerLevel;
+import net.minecraft.util.RandomSource;
 import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.properties.*;
 import net.minecraft.world.phys.shapes.Shapes;
 import net.minecraftforge.network.NetworkHooks;
@@ -20,13 +24,6 @@ import net.minecraft.world.level.material.FluidState;
 import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.BlockBehaviour;
-import net.minecraft.world.level.block.SoundType;
-import net.minecraft.world.level.block.SimpleWaterloggedBlock;
-import net.minecraft.world.level.block.Rotation;
-import net.minecraft.world.level.block.Mirror;
-import net.minecraft.world.level.block.HorizontalDirectionalBlock;
-import net.minecraft.world.level.block.Blocks;
-import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.LevelReader;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.Level;
@@ -54,8 +51,8 @@ import java.util.List;
 import java.util.Collections;
 
 import io.netty.buffer.Unpooled;
+import utils.enums.CapsuleStates;
 
-import static net.mcreator.changedmod.block.CapsuleEnumStates.*;
 import static net.minecraft.core.Direction.NORTH;
 
 public class CapsuleBlock extends Block implements SimpleWaterloggedBlock
@@ -63,7 +60,7 @@ public class CapsuleBlock extends Block implements SimpleWaterloggedBlock
 {
 	public static final DirectionProperty FACING = HorizontalDirectionalBlock.FACING;
 	public static final BooleanProperty WATERLOGGED = BlockStateProperties.WATERLOGGED;
-	public static final EnumProperty<CapsuleEnumStates> HALF = EnumProperty.create("half", CapsuleEnumStates.class);
+	public static final EnumProperty<CapsuleStates> HALF = EnumProperty.create("half", CapsuleStates.class);
 	public static final BooleanProperty OCCUPIED = BooleanProperty.create("occupied");
 
 	//Hit boxes
@@ -119,7 +116,7 @@ public class CapsuleBlock extends Block implements SimpleWaterloggedBlock
 	public CapsuleBlock() {
 		super(BlockBehaviour.Properties.of(Material.HEAVY_METAL).sound(SoundType.METAL).strength(25f, 10f).requiresCorrectToolForDrops().noOcclusion()
 				.isRedstoneConductor((bs, br, bp) -> false));
-		this.registerDefaultState(this.stateDefinition.any().setValue(FACING, NORTH).setValue(WATERLOGGED, false).setValue(HALF, DOWN).setValue(OCCUPIED, false));
+		this.registerDefaultState(this.stateDefinition.any().setValue(FACING, NORTH).setValue(WATERLOGGED, false).setValue(HALF, CapsuleStates.DOWN).setValue(OCCUPIED, false));
 	}
 
 	@Override
@@ -134,7 +131,7 @@ public class CapsuleBlock extends Block implements SimpleWaterloggedBlock
 
 	@Override
 	public VoxelShape getShape(BlockState state, BlockGetter world, BlockPos pos, CollisionContext context) {
-		if (state.getValue(HALF) == UP)
+		if (state.getValue(HALF) == CapsuleStates.UP)
 			return Shapes.or(LID, getCapsule(state));
 		else
 			return Shapes.or(BASE, getCapsule(state));
@@ -348,15 +345,29 @@ public class CapsuleBlock extends Block implements SimpleWaterloggedBlock
 	}
 
 	@Override
-	public boolean canSurvive(BlockState blockstate, LevelReader worldIn, BlockPos pos) {
+	public boolean canSurvive(BlockState state, LevelReader worldIn, BlockPos pos) {
 		if (worldIn instanceof LevelAccessor world) {
-			int x = pos.getX();
-			int y = pos.getY();
-			int z = pos.getZ();
-			return CapsulePlacementConditionProcedure.execute(world, x, y, z);
+			if (state.getValue(HALF) == CapsuleStates.UP) {
+				return world.getBlockState(pos.below()).getBlock() == ChangedModBlocks.CAPSULE.get();
+			} else {
+				if (world.getBlockState(pos.above()).getBlock() == ChangedModBlocks.CAPSULE.get()
+						&& (world.getBlockState(pos.below()).canOcclude() || world.getBlockState(pos.below().below()).canOcclude()))
+					return true;
+			}
 		}
-		return super.canSurvive(blockstate, worldIn, pos);
+		return super.canSurvive(state, worldIn, pos);
 	}
+	public void playerWillDestroy(Level world, BlockPos pos, BlockState state, Player player) {
+	if (!world.isClientSide && player.isCreative()) {
+		//DoublePlantBlock.preventCreativeDropFromBottomPart(world, pos, state, player);
+	}
+
+	if (state.getValue(HALF) == CapsuleStates.UP)
+		world.setBlock(pos.below(), Blocks.AIR.defaultBlockState(), 3);
+	else if (state.getValue(HALF) == CapsuleStates.DOWN)
+		world.setBlock(pos.above(), Blocks.AIR.defaultBlockState(), 3);
+	super.playerWillDestroy(world, pos, state, player);
+}
 
 	@Override
 	public FluidState getFluidState(BlockState state) {
@@ -373,7 +384,6 @@ public class CapsuleBlock extends Block implements SimpleWaterloggedBlock
 				? Blocks.AIR.defaultBlockState()
 				: super.updateShape(state, facing, facingState, world, currentPos, facingPos);
 	}
-
 	@Override
 	public ItemStack getCloneItemStack(BlockState state, HitResult target, BlockGetter world, BlockPos pos, Player player) {
 		return new ItemStack(ChangedModBlocks.CAPSULE.get());
@@ -406,15 +416,12 @@ public class CapsuleBlock extends Block implements SimpleWaterloggedBlock
 
 	@Override
 	public void setPlacedBy(Level world, BlockPos pos, BlockState blockstate, LivingEntity entity, ItemStack itemstack) {
-		super.setPlacedBy(world, pos, blockstate, entity, itemstack);
-		CapsulePlaceProcedure.execute(world, pos.getX(), pos.getY(), pos.getZ());
-	}
-
-	@Override
-	public boolean onDestroyedByPlayer(BlockState blockstate, Level world, BlockPos pos, Player entity, boolean willHarvest, FluidState fluid) {
-		boolean retval = super.onDestroyedByPlayer(blockstate, world, pos, entity, willHarvest, fluid);
-		CapsuleDeleteProcedure.execute(world, pos.getX(), pos.getY(), pos.getZ(), blockstate);
-		return retval;
+		if (world.getBlockState(pos.below()).canOcclude()) {
+			world.setBlock(pos.above(), blockstate.setValue(HALF, CapsuleStates.UP), 3);
+		} else if (world.getBlockState(pos.below().below()).canOcclude()) {
+			world.setBlock(pos, blockstate.setValue(HALF, CapsuleStates.UP), 3);
+			world.setBlock(pos.below(), blockstate.setValue(HALF, CapsuleStates.DOWN), 3);
+		}
 	}
 
 	public void attack(BlockState blockstate, Level world, BlockPos pos, Player entity) {
@@ -424,7 +431,6 @@ public class CapsuleBlock extends Block implements SimpleWaterloggedBlock
 
 	@Override
 	public InteractionResult use(BlockState blockstate, Level world, BlockPos pos, Player entity, InteractionHand hand, BlockHitResult hit) {
-		super.use(blockstate, world, pos, entity, hand, hit);
 		if (entity instanceof ServerPlayer player && (!(blockstate.getBlock().getStateDefinition().getProperty("occupied") instanceof BooleanProperty _getbp1
 				&& blockstate.getValue(_getbp1)))) {
 			NetworkHooks.openScreen(player, new MenuProvider() {
@@ -457,5 +463,12 @@ public class CapsuleBlock extends Block implements SimpleWaterloggedBlock
 			CapsuleWakeProcedure.execute(world, x, y ,z, blockstate);
 		}
 		return InteractionResult.SUCCESS;
+	}
+	@Override
+	public void tick(BlockState blockstate, ServerLevel world, BlockPos pos, RandomSource random) {
+	}
+
+	@Override
+	public void neighborChanged(BlockState state, Level world, BlockPos pos, Block block, BlockPos _pos, boolean b) {
 	}
 }

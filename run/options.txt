@@ -31,17 +31,17 @@ simulationDistance:5
 entityDistanceScaling:1.0
 guiScale:0
 particles:0
-maxFps:70
+maxFps:260
 graphicsMode:0
 ao:0
 prioritizeChunkUpdates:0
 biomeBlendRadius:2
 renderClouds:"false"
-resourcePacks:[]
+resourcePacks:["vanilla","mod_resources"]
 incompatibleResourcePacks:[]
 lastServer:localhost:25463
 lang:en_us
-soundDevice:"OpenAL Soft on Speakers (Conexant ISST Audio)"
+soundDevice:"OpenAL Soft on Headphones (イーブイのエアポッド Stereo)"
 chatVisibility:0
 chatOpacity:1.0
 chatLineSpacing:0.0

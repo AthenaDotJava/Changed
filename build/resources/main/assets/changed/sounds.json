@@ -216,11 +216,31 @@
     ]
   },
   "gasroom": {
-    "category": "music",
+    "category": "record",
     "sounds": [
       {
         "name": "changed:12-gas_room",
         "stream": true
+      }
+    ]
+  },
+  "terminal.success": {
+    "category": "block",
+    "subtitle": "subtitles.terminal.success",
+    "sounds": [
+      {
+        "name": "changed:success",
+        "stream": false
+      }
+    ]
+  },
+  "terminal.fail": {
+    "category": "block",
+    "subtitle": "subtitles.terminal.fail",
+    "sounds": [
+      {
+        "name": "changed:fail",
+        "stream": false
       }
     ]
   }

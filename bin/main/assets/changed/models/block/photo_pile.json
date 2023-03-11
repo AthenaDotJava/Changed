@@ -1,0 +1,9 @@
+{
+  "parent": "changed:custom/photo_stack",
+  "textures": {
+    "all": "changed:blocks/photos",
+    "particle": "changed:blocks/photos",
+    "1": "changed:blocks/photos"
+  },
+  "render_type": "cutout"
+}

@@ -1,7 +1,6 @@
 
 package net.mcreator.changedmod.world.inventory;
 
-import net.minecraft.world.level.block.state.properties.EnumProperty;
 import net.minecraftforge.items.ItemStackHandler;
 import net.minecraftforge.items.IItemHandler;
 

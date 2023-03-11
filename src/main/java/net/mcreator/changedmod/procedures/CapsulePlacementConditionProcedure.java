@@ -14,4 +14,7 @@ public class CapsulePlacementConditionProcedure {
 		}
 		return false;
 	}
+	public static boolean isPlaceHalfDown(LevelAccessor world, double x, double y, double z){
+		return world.getBlockState(new BlockPos(x, y - 1, z)).canOcclude();
+	}
 }

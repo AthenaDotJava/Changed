@@ -87,6 +87,7 @@ public class ChangedModItems {
 	public static final RegistryObject<Item> CAPSULE = block(ChangedModBlocks.CAPSULE, ChangedModTabs.TAB_CHANGED);
 	public static final RegistryObject<Item> TERMINAL = block(ChangedModBlocks.TERMINAL, ChangedModTabs.TAB_CHANGED);
 	public static final RegistryObject<Item> KEY_CARD = REGISTRY.register("key_card", () -> new KeyCardItem());
+	public static final RegistryObject<Item> PHOTO_PILE = block(ChangedModBlocks.PHOTO_PILE, ChangedModTabs.TAB_CHANGED);
 
 	private static RegistryObject<Item> block(RegistryObject<Block> block, CreativeModeTab tab) {
 		return REGISTRY.register(block.getId().getPath(), () -> new BlockItem(block.get(), new Item.Properties().tab(tab)));

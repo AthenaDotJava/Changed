@@ -36,6 +36,7 @@ import net.mcreator.changedmod.init.ChangedModMenus;
 import net.mcreator.changedmod.init.ChangedModItems;
 import net.mcreator.changedmod.init.ChangedModEntities;
 import net.mcreator.changedmod.init.ChangedModBlocks;
+import net.mcreator.changedmod.init.ChangedModBlockEntities;
 
 import java.util.function.Supplier;
 import java.util.function.Function;
@@ -57,6 +58,7 @@ public class ChangedMod {
 		ChangedModBlocks.REGISTRY.register(bus);
 		ChangedModItems.REGISTRY.register(bus);
 		ChangedModEntities.REGISTRY.register(bus);
+		ChangedModBlockEntities.REGISTRY.register(bus);
 
 		ChangedModParticleTypes.REGISTRY.register(bus);
 		ChangedModMenus.REGISTRY.register(bus);

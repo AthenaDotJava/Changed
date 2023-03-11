@@ -4,12 +4,12 @@ license="Academic Free License v3.0"
 
 [[mods]]
 modId="changed"
-version="0.2.4"
+version="0.4.0"
 displayName="Changed Mod"
 credits="Created using mod maker MCreator - https://mcreator.net/about"
 displayURL="https://mcreator.net"
 logoFile="logo.png"
-authors="Athena.java, MCreator"
+authors="Athena.java"
 description='''
 Adds the characters and enemies from Changed to Minecraft
 '''

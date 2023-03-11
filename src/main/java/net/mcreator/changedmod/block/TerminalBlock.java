@@ -1,51 +1,47 @@
 
 package net.mcreator.changedmod.block;
 
-import net.minecraft.world.level.block.state.properties.*;
-import net.minecraftforge.network.NetworkHooks;
-
-import net.minecraft.world.phys.shapes.VoxelShape;
-import net.minecraft.world.phys.shapes.Shapes;
-import net.minecraft.world.phys.shapes.CollisionContext;
-import net.minecraft.world.phys.BlockHitResult;
-import net.minecraft.world.level.storage.loot.LootContext;
-import net.minecraft.world.level.material.Material;
-import net.minecraft.world.level.material.Fluids;
-import net.minecraft.world.level.material.FluidState;
-import net.minecraft.world.level.block.state.StateDefinition;
-import net.minecraft.world.level.block.state.BlockState;
-import net.minecraft.world.level.block.state.BlockBehaviour;
-import net.minecraft.world.level.block.SoundType;
-import net.minecraft.world.level.block.SimpleWaterloggedBlock;
-import net.minecraft.world.level.block.Rotation;
-import net.minecraft.world.level.block.Mirror;
-import net.minecraft.world.level.block.HorizontalDirectionalBlock;
-import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.LevelAccessor;
-import net.minecraft.world.level.Level;
-import net.minecraft.world.level.BlockGetter;
-import net.minecraft.world.item.context.BlockPlaceContext;
-import net.minecraft.world.item.TieredItem;
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.inventory.AbstractContainerMenu;
-import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.entity.player.Inventory;
-import net.minecraft.world.MenuProvider;
-import net.minecraft.world.InteractionResult;
-import net.minecraft.world.InteractionHand;
-import net.minecraft.server.level.ServerPlayer;
-import net.minecraft.network.chat.Component;
-import net.minecraft.network.FriendlyByteBuf;
-import net.minecraft.core.Direction;
+import net.mcreator.changedmod.init.ChangedModItems;
+import net.mcreator.changedmod.init.ChangedModSounds;
 import net.minecraft.core.BlockPos;
+import net.minecraft.core.Direction;
+import net.minecraft.nbt.StringTag;
+import net.minecraft.server.level.ServerLevel;
+import net.minecraft.sounds.SoundEvent;
+import net.minecraft.sounds.SoundSource;
+import net.minecraft.util.RandomSource;
+import net.minecraft.world.InteractionHand;
+import net.minecraft.world.InteractionResult;
+import net.minecraft.world.entity.Entity;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.TieredItem;
+import net.minecraft.world.item.context.BlockPlaceContext;
+import net.minecraft.world.level.BlockGetter;
+import net.minecraft.world.level.Level;
+import net.minecraft.world.level.LevelAccessor;
+import net.minecraft.world.level.block.*;
+import net.minecraft.world.level.block.state.BlockBehaviour;
+import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.level.block.state.StateDefinition;
+import net.minecraft.world.level.block.state.properties.BlockStateProperties;
+import net.minecraft.world.level.block.state.properties.BooleanProperty;
+import net.minecraft.world.level.block.state.properties.DirectionProperty;
+import net.minecraft.world.level.block.state.properties.EnumProperty;
+import net.minecraft.world.level.gameevent.GameEvent;
+import net.minecraft.world.level.material.FluidState;
+import net.minecraft.world.level.material.Fluids;
+import net.minecraft.world.level.material.Material;
+import net.minecraft.world.level.storage.loot.LootContext;
+import net.minecraft.world.phys.BlockHitResult;
+import net.minecraft.world.phys.shapes.CollisionContext;
+import net.minecraft.world.phys.shapes.Shapes;
+import net.minecraft.world.phys.shapes.VoxelShape;
+import utils.enums.CardTypes;
 
-import net.mcreator.changedmod.world.inventory.TerminalUIMenu;
-import net.mcreator.changedmod.utils.CardTypes;
-
-import java.util.List;
+import javax.annotation.Nullable;
 import java.util.Collections;
-
-import io.netty.buffer.Unpooled;
+import java.util.List;
 
 public class TerminalBlock extends Block implements SimpleWaterloggedBlock
 
@@ -55,10 +51,11 @@ public class TerminalBlock extends Block implements SimpleWaterloggedBlock
 	public static final BooleanProperty PASS_SET = BooleanProperty.create("pass_set");
 	public static final BooleanProperty POWERED = BooleanProperty.create("powered");
 	public static final EnumProperty<CardTypes> CARD = EnumProperty.create("card_type", CardTypes.class);
+	public static final int POWER_DURATION = 30;
 
 	public TerminalBlock() {
 		super(BlockBehaviour.Properties.of(Material.METAL).sound(SoundType.METAL).strength(10f).requiresCorrectToolForDrops().noOcclusion()
-				.isRedstoneConductor((bs, br, bp) -> false));
+				.isRedstoneConductor((bs, br, bp) -> true));
 		this.registerDefaultState(this.stateDefinition.any().setValue(FACING, Direction.NORTH).setValue(WATERLOGGED, false)
 				.setValue(PASS_SET, false).setValue(POWERED, false)
 				.setValue(CARD, CardTypes.WHITE)
@@ -149,22 +146,72 @@ public class TerminalBlock extends Block implements SimpleWaterloggedBlock
 	}
 
 	@Override
-	public InteractionResult use(BlockState blockstate, Level world, BlockPos pos, Player entity, InteractionHand hand, BlockHitResult hit) {
-		super.use(blockstate, world, pos, entity, hand, hit);
-		if (entity instanceof ServerPlayer player) {
-			NetworkHooks.openScreen(player, new MenuProvider() {
-				@Override
-				public Component getDisplayName() {
-					return Component.literal("Terminal");
-				}
+	public InteractionResult use(
+			BlockState blockstate, Level world, BlockPos pos, Player entity, InteractionHand hand, BlockHitResult hit
+	) {
+		if ((entity.getMainHandItem()).getItem() == ChangedModItems.KEY_CARD.get()) {
+			ItemStack card = entity.getMainHandItem();
+			if (blockstate.getValue(PASS_SET)) {
+				if (card.getOrCreateTag().get("Colour") instanceof StringTag) {
+					if (card.getOrCreateTag().get("Colour").toString().substring(1, card.getOrCreateTag().get("Colour")
+							.toString().length() - 1).toLowerCase().equals(blockstate.getValue(CARD).getSerializedName())) {
+						this.power(blockstate, world, pos);
+						playSound(entity, world, pos, true);
 
-				@Override
-				public AbstractContainerMenu createMenu(int id, Inventory inventory, Player player) {
-					return new TerminalUIMenu(id, inventory, new FriendlyByteBuf(Unpooled.buffer()).writeBlockPos(pos));
+						return InteractionResult.SUCCESS;
+					} else {
+						playSound(entity, world, pos, false);
+
+						return InteractionResult.SUCCESS;
+					}
 				}
-			}, pos);
+			} else {
+				try {
+					world.setBlock(pos,
+							blockstate.setValue(PASS_SET, true)
+									.setValue(CARD, CardTypes.valueOf(card.getOrCreateTag()
+											.get("Colour").toString().substring(1, card.getOrCreateTag()
+													.get("Colour").toString().length() - 1).toUpperCase())),
+							3);
+					playSound(entity, world, pos, true);
+
+					return InteractionResult.SUCCESS;
+				} catch (NullPointerException | IllegalArgumentException e){
+					playSound(entity, world, pos, false);
+					return InteractionResult.SUCCESS;
+				}
+			}
 		}
-		return InteractionResult.SUCCESS;
+		return InteractionResult.FAIL;
 	}
 
+	private void power(BlockState blockstate, Level world, BlockPos pos) {
+		world.setBlock(pos, blockstate.setValue(POWERED, Boolean.valueOf(true)), 3);
+		this.updateNeighbours(blockstate, world, pos);
+		world.scheduleTick(pos, this, POWER_DURATION);
+	}
+	private void updateNeighbours(BlockState state, Level world, BlockPos pos) {
+	world.updateNeighborsAt(pos, this);
+	world.updateNeighborsAt(pos.relative(state.getValue(FACING).getOpposite()), this);
+}
+	public void tick(BlockState state, ServerLevel level, BlockPos pos, RandomSource source) {
+		if (state.getValue(POWERED)) {
+				level.setBlock(pos, state.setValue(POWERED, Boolean.valueOf(false)), 3);
+				this.updateNeighbours(state, level, pos);
+				level.gameEvent((Entity)null, GameEvent.BLOCK_DEACTIVATE, pos);
+		}
+	}
+
+	public boolean isSignalSource(BlockState state) {
+		return true;
+	}
+	public int getSignal(BlockState state, BlockGetter getter, BlockPos pos, Direction direction){
+		return state.getValue(POWERED) ? 15 : 0;
+	}
+	protected void playSound(@Nullable Player entity, LevelAccessor world, BlockPos pos, boolean accepted) {
+		world.playSound(accepted ? entity : null, pos, this.getSound(accepted), SoundSource.BLOCKS, 0.3F, accepted ? 0.6F : 0.5F);
+	}
+	protected SoundEvent getSound(boolean b) {
+		return b ? ChangedModSounds.TERMINAL_SUCCESS.get() : ChangedModSounds.TERMINAL_FAIL.get();
+	}
 }
